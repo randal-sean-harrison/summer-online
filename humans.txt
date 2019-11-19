@@ -1,0 +1,26 @@
+/* Website Design */
+
+   Project: Summer Online Dynamic Course Delivery from Registrars' API
+   Web Design and Development
+
+	Release date: Spring, 2019
+
+      Hannah Isaccson
+      Solution Primary Developer
+   	  Employed: Office of Digital Learning, University of Notre Dame
+   	  Contact: hisaacson21@gmail.com
+
+      G. Chris Clark
+      Consultant / co-developer
+   	  Employed: Hesburgh Libraries, University of Notre Dame
+   	  Contact: rharriso@nd.edu
+
+   /* Technologies, Credits  */
+
+      Platform: Wordpress (WP Engine)
+      Languages: HTML5, CSS3, Javascript
+      Frameworks: jQuery
+      Plugin: JSONcontentimporter
+      Web Fonts: FontAwesome
+
+      IDE/Env: Atom.io

@@ -1,0 +1,20 @@
+DONE
+
+Dropdown Bar:
+   - Keep course title, instructor and department (DONE)
+   - Change credit hours to credits (DONE)
+   - Get rid of Days category (DONE)
+- API Course Description:
+   - URL coming from API, adding to each course for enrollment (update to come…?) (DONE)
+- Search Bar:
+  - Typing in search field, clear all dropdown bars (DONE)
+  - getting a blue on the search bar (DONE)
+------------------------------------------------------------------------------
+
+STILL TO DO
+
+- Fix the calendar data:
+  - Parse html -- need to add back in and delete the garbage.
+- Adjust to mobile layout
+- Push to production
+- Documentation
