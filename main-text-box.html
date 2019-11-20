@@ -1,52 +1,55 @@
-<h3>Search Courses</h3>
-<p id="clear-search"><button class="link-green"><i class="fa fa-refresh fa-fw link-green" aria-hidden="true"></i> Clear Search</button></p>
-
-<div class="search">
-  <form>
-    <div id="magnifying"></div>
-    <input id="search-text" type="text" placeholder="Search" autofocus autocomplete="off">
-
-  </form>
-</div>
-<div>
-  <p id="show-hide-container" class="text-right link-green"><i class="fa fa-eye" aria-hidden="true"></i>  <span id="show-hide-label">Show</span> Descriptions</p>
-
-</div>
-[jsoncontentimporter url=https://summeronline-dcnd.s3.amazonaws.com/prod/course_catalog.json]
-<div class="course-card">
-  <div class="course-header">
-
-    <!-- Header -->
-    <div class="course-title">
-      <h4 class="white">{department_code} {course_number}</h4>
-      <p class="lead white">{title}</p>
-
-      <div class="course-instructor">
-        <h5>{all_instructors}</h5>
+<div class="all-stuff">
+    <h3>Search Courses</h3>
+    <p id="clear-search"><button class="link-green"><i class="fa fa-refresh fa-fw link-green" aria-hidden="true"></i> Clear Search</button></p>
+    
+    <div class="search">
+      <form>
+        <div id="magnifying"></div>
+        <input id="search-text" type="text" placeholder="Search" autofocus autocomplete="off">
+    
+      </form>
+    </div>
+    <div>
+      <p id="show-hide-container" class="text-right link-green"><i class="fa fa-eye" aria-hidden="true"></i>  <span id="show-hide-label">Show</span> Descriptions</p>
+    
+    </div>
+    [jsoncontentimporter url=https://summeronline-dcnd.s3.amazonaws.com/prod/course_catalog.json]
+    <div class="course-card">
+      <div class="course-header">
+    
+        <!-- Header -->
+        <div class="course-title">
+          <h4 class="white">{department_code} {course_number}</h4>
+          <p class="lead white">{title}</p>
+    
+          <div class="course-instructor">
+            <h5>{all_instructors}</h5>
+          </div>
+        </div>
+      </div>
+      <!-- Details -->
+      <div class="course-details">
+        <ul>
+          <li class="cd-department">{subject_desc}</li>
+          <li class="cd-credits">{credit_hr_low} credits</li>
+          <li class="cd-crn">CRN {crn}</li>
+          <li class="cd-date">
+            5/27/2019 - 7/15/2019</li>
+          <li class="cd-time">TTh 5:30pm - 7:00pm</li>
+        </ul>
+    
+      </div>
+    
+      <hr />
+    
+      <!-- course details closes -->
+      <div class="course-description">
+        <p class="toggle-description link-green">Course Description   <i id="what-carat" class="fa fa-caret-down" aria-hidden="true"></i></p>
+        <div class="description-text">
+            <small>{course_description}</small>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- Details -->
-  <div class="course-details">
-    <ul>
-      <li class="cd-department">{subject_desc}</li>
-      <li class="cd-credits">{credit_hr_low} credits</li>
-      <li class="cd-crn">CRN {crn}</li>
-      <li class="cd-date">
-        5/27/2019 - 7/15/2019</li>
-      <li class="cd-time">TTh 5:30pm - 7:00pm</li>
-    </ul>
-
-  </div>
-
-  <hr />
-
-  <!-- course details closes -->
-  <div class="course-description">
-    <p class="toggle-description link-green">Course Description   <i id="what-carat" class="fa fa-caret-down" aria-hidden="true"></i></p>
-    <div class="description-text">
-        <small>{course_description}</small>
-    </div>
-  </div>
+    [/jsoncontentimporter]
 </div>
-[/jsoncontentimporter]
+<!--all-stuff closes-->
