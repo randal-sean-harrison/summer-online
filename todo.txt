@@ -18,9 +18,5 @@ STILL TO DO
   - Parse html -- need to add back in and delete the garbage. (Talk to Sonia about options; our best thinking is to get the query to pull in unique values that we can use to populate the template fields, rather than trying to parse complicated and variable data with REGEX)
 
 
-
-
-
-
 - Push to production
 - Documentation

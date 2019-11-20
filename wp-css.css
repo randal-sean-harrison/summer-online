@@ -345,7 +345,7 @@ p.lead {
 /*search icon*/
 
 .search input {
-	display: inline-block;
+	display: block;
 	width: 90%;
 	height: 3rem;
 	opacity:.85;
@@ -353,7 +353,7 @@ p.lead {
 	border: none !important;
 	border-radius: 0 4px 4px 0;
 	font-size: 1.70rem;
-	margin-bottom: 2rem;
+	margin: 1rem auto 2rem auto;
 	z-index: 1 !important;
 	padding: 2rem !important;
 }
@@ -453,6 +453,7 @@ input:-internal-autofill-selected {
 	margin-bottom: 15px;
 	padding: 1rem;
 	border: 1px solid lightgray;
+	background-color: white;
 	cursor: pointer;
 	font-size: 1rem;
 	border-radius: 4px;
@@ -504,3 +505,38 @@ input:focus, textarea:focus, select:focus {
 	outline: none !important;
 	box-shadow: none !important;
 }
+
+/*adjusting for media*/
+@media screen and (max-width: 1024px) and (min-width: 568px) {
+.course-card {
+	width: 46%;
+}
+	#magnifying {
+		display: none;
+	}
+	
+		.search input {
+		border-radius: 4px !important;
+	}
+	
+	
+	
+}
+
+@media screen and (max-width: 567px){
+	.course-card{
+		width: 100%;
+	}
+	
+	#magnifying {
+		display: none;
+	}
+	
+	.search input {
+		border-radius: 4px !important;
+	}
+
+
+}
+
+
