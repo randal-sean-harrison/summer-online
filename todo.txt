@@ -9,12 +9,18 @@ Dropdown Bar:
 - Search Bar:
   - Typing in search field, clear all dropdown bars (DONE)
   - getting a blue on the search bar (DONE)
+- Adjust to mobile layout (DONE)
 ------------------------------------------------------------------------------
 
 STILL TO DO
 
 - Fix the calendar data:
-  - Parse html -- need to add back in and delete the garbage.
-- Adjust to mobile layout
+  - Parse html -- need to add back in and delete the garbage. (Talk to Sonia about options; our best thinking is to get the query to pull in unique values that we can use to populate the template fields, rather than trying to parse complicated and variable data with REGEX)
+
+
+
+
+
+
 - Push to production
 - Documentation
