@@ -231,10 +231,8 @@ for (i = 0; i < allCourseName.length; i++) {
       jQuery(this).toggle(jQuery(this).text().toLowerCase().indexOf(courseNameValue) > -1)
     });
 
-
-
-
   });
 
 
 });
+// document.ready
