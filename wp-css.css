@@ -1,34 +1,34 @@
 @font-face {
-    font-family: 'Galaxie Polaris Medium';
-    src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolaris-Medium.eot');
-    src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolaris-Medium.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Galaxie Polaris Medium';
+  src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolaris-Medium.eot');
+  src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolaris-Medium.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Galaxie Polaris Book';
-    src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolaris-Book.eot') !important;
-    src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolaris-Book.ttf') format('truetype') !important;
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Galaxie Polaris Book';
+  src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolaris-Book.eot') !important;
+  src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolaris-Book.ttf') format('truetype') !important;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Galaxie Polaris Condensed';
-    src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolarisCondensed-Bold.eot');
-    src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolarisCondensed-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Galaxie Polaris Condensed';
+  src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolarisCondensed-Bold.eot');
+  src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolarisCondensed-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 body {
-	font-family: "Galaxie Polaris Book", sans-serif !important;
-	font-weight: normal !important;
+  font-family: "Galaxie Polaris Book", sans-serif !important;
+  font-weight: normal !important;
 }
 
 h1, h2, h3, h4, h5, h6, .tp-caption {
-	font-family: "Galaxie Polaris Condensed", sans-serif !important;
+  font-family: "Galaxie Polaris Condensed", sans-serif !important;
 }
 
 #large-screen-brand h5,
@@ -37,164 +37,159 @@ h1, h2, h3, h4, h5, h6, .tp-caption {
 #mobile-brand h6 a,
 #provost-brand h5,
 #provost-brand h5 a {
-	font-family: 'EB Garamond', serif;
-   font-size: 22px;
-	letter-spacing: .2rem;
-	color: white;
-	cursor: pointer;
-	text-decoration: none;
+  font-family: 'EB Garamond', serif;
+  font-size: 22px;
+  letter-spacing: .2rem;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 #large-screen-brand h5,
 #large-screen-brand h5 a {
-	font-size: 15px;
+  font-size: 15px;
 }
 
 #large-screen-brand h5 {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 599px) {
 
-	/* Show and hide the different divs on small devices */
-	#large-screen-brand {
-		display: none;
-	}
+  /* Show and hide the different divs on small devices */
+  #large-screen-brand {
+    display: none;
+  }
 
-	#mobile-brand {
-		display: block;
-		text-align: center;
-	}
+  #mobile-brand {
+    display: block;
+    text-align: center;
+  }
 
-	#provost-brand {
-		display: none;
+  #provost-brand {
+    display: none;
     text-align: center !important;
-		margin-top: -20px !important;
-	}
-
+    margin-top: -20px !important;
+  }
 }
 
 @media only screen and (min-width: 600px) {
 
-/* Show and hide the different divs on larger devices */
-	#large-screen-brand {
-		display: block;
-		text-align: left;
-	}
+  /* Show and hide the different divs on larger devices */
+  #large-screen-brand {
+    display: block;
+    text-align: left;
+  }
 
-	#mobile-brand {
-		display: none;
-	}
+  #mobile-brand {
+    display: none;
+  }
 
-   #provost-brand {
-      display: none;
-		 text-align: right;
-		 margin-top: -20px !important;
-	}
-
+  #provost-brand {
+    display: none;
+    text-align: right;
+    margin-top: -20px !important;
+  }
 }
 
 @media only screen and (max-width: 748px) {
-	   #provost-brand {
-				display: none;
-		}
+  #provost-brand {
+    display: none;
+  }
 }
 
 #copyright-footer a:hover {
-	color: #00843D !important;
-	text-decoration: underline;
+  color: #00843D !important;
+  text-decoration: underline;
 }
 
 div.ufaq-faq-post p,
 div.ufaq-faq-post p span {
-	font-weight: normal !important;
-	}
+  font-weight: normal !important;
+}
 
 .green {
-	color: #00843D !important;
+  color: #00843D !important;
 }
 
 .gold {
-	color: #ae914e !important;
+  color: #ae914e !important;
 }
 
 .white {
-	color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 a {
-	font-size: inherit !important;
+  font-size: inherit !important;
 }
 
 .ufaq-faq-category-title h3,
-.gdlr-core-course-item-title span{
-	color: #0A233F !important;
+.gdlr-core-course-item-title span {
+  color: #0A233F !important;
 }
 
 /** fixing spacing issues with the Apply Here button **/
-
 a.better-button {
-	font-size: 2.4rem !important;
-	color: #ffffff;
-	background-color: #00843d;
-	padding: 1.2rem 1.8rem;
-	border-radius: 5px;
-	font-family: "Galaxie Polaris Book", sans-serif !important;
-	font-weight: bold !important;
+  font-size: 2.4rem !important;
+  color: #ffffff;
+  background-color: #00843d;
+  padding: 1.2rem 1.8rem;
+  border-radius: 5px;
+  font-family: "Galaxie Polaris Book", sans-serif !important;
+  font-weight: bold !important;
 }
 
 a.better-button:focus, a.better-button:hover {
-	color: #ffffff;
+  color: #ffffff;
 }
 
 #apply-here {
-	margin-top: 2%;
-	margin-bottom: -2.5%;
+  margin-top: 2%;
+  margin-bottom: -2.5%;
 }
 
 /** styling FAQs for readability **/
-
 .ufaq-faq-title-text h4 {
-	font-size: 1.4rem !important;
-	font-weight: 500 !important;
+  font-size: 1.4rem !important;
+  font-weight: 500 !important;
 }
 
 /** styling page titles for readability **/
-
 h1.kingster-page-title {
-	font-size: 4rem !important;
+  font-size: 4rem !important;
 }
 
 h2.office-name {
-	font-size: 1.6rem;
-	margin-bottom:0.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Styles for the courses page */
-
 .course-card {
-	border:1px solid lightgray;      border-radius:8px;
-	margin-bottom:25px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-width: 31%;
-	float: left;
-	margin-right: .5rem;
-	margin-left: .5rem;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 31%;
+  float: left;
+  margin-right: .5rem;
+  margin-left: .5rem;
+	min-height: 425px;
 }
 
 .course-header {
-	border-bottom-right-radius: 0px !important;
-    border-bottom-left-radius: 0px !important;
-
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
 }
 
 p.lead {
-	font-size: 20px;
+  font-size: 20px;
 }
 
 .course-details,
 .course-description {
-	padding: 1rem;
+  padding: 1rem;
 }
 
 .course-description {
@@ -202,172 +197,171 @@ p.lead {
 }
 
 .description-text p {
-	line-height: 1.25;
-	font-weight: 400 !important;
+  line-height: 1.25;
+  font-weight: 400 !important;
 }
 
 .course-details {
-	padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 .course-description p:first-child {
- font-size: 102%;
-	font-weight: 600;
-	margin-top: 0;
+  font-size: 102%;
+  font-weight: 600;
+  margin-top: 0;
 }
 
 .toggle-description {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 /* course details */
-
 .course-header {
-	border-radius:8px;
-	background: #192f59;
-	padding-top:.5rem;
-	padding-left: .5rem;
+  border-radius: 8px;
+  background: #192f59;
+  padding-top: .5rem;
+  padding-left: .5rem;
 }
 
 .course-details ul {
-	list-style-type: none;
-	padding-left: 0;
-	margin-left: 0;
-	padding-bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+  padding-bottom: 0;
 }
 
 .course-card hr {
-	margin-left: 3%;
-	width: 94%;
+  margin-left: 3%;
+  width: 94%;
 }
 
 .course-details ul li {
-	margin-bottom: .35rem;
-	font-family: "FontAwesome";
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-	font-size: .9rem;
+  margin-bottom: .35rem;
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  font-size: .9rem;
 }
 
 .course-title {
-	padding: 5px;
-	margin-left: 5px
+  padding: 5px;
+  margin-left: 5px
 }
 
 .course-title h4 {
-	margin-bottom: .5rem;
-	font-size: larger !important;
+  margin-bottom: .5rem;
+  font-size: larger !important;
 }
 
 .course-title p.lead {
-	font-size: .95rem;
+  font-size: .95rem;
 }
 
 .course-instructor h5 {
-	color: #3db166;
-	color: aliceblue !important;
-	opacity: .5;
-	margin-top: .25rem;
-	font-size: 95%;
+  color: #3db166;
+  color: aliceblue !important;
+  opacity: .5;
+  margin-top: .25rem;
+  font-size: 95%;
 }
 
-
 .opacity-half {
-	opacity: .5 !important;
+  opacity: .5 !important;
 }
 
 .gray {
-	color: gray !important;
+  color: gray !important;
 }
 
 .cd-department:before {
-	content: "\f19c\00a0\00a0";
+  content: "\f19c\00a0\00a0";
 }
-
 
 .cd-credits:before {
-	content: "\f02d\00a0\00a0";
+  content: "\f02d\00a0\00a0";
 }
 
-
 .cd-crn:before {
-	content: "\f292\00a0\00a0";
+  content: "\f292\00a0\00a0";
 }
 
 .cd-times:before {
-	content: "f073\00a0\00a0";
+  content: "f073\00a0\00a0";
 }
 
 .cd-date:before {
-	content: "\f073\00a0\00a0";
+  content: "\f073\00a0\00a0";
 }
 
-
 .cd-time:before {
-	content: "\f017\00a0\00a0";
+  content: "\f017\00a0\00a0";
 }
 
 /* Course search box */
 #course-search-box {
-	background-image:url("https://ndsol.wpengine.com/wp-content/uploads/2018/08/search-bg-2.jpg") !important;
-	padding:1rem;
+  background-image: url("https://ndsol.wpengine.com/wp-content/uploads/2018/08/search-bg-2.jpg") !important;
+  padding: 1rem;
 }
 
 #course-search-box label {
   color: white;
+  max-width: 325px;
 }
 
 #filter-courses {
-	background: #00843d;
-	color: white;
-	padding: .5rem;
-	cursor: pointer;
-	border-radius: 4px;
-	font-size: 1rem;
-	border: none;
-	margin-top: 1rem;
+  background: #00843d;
+  color: white;
+  padding: .5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+  border: none;
+  margin-top: 1rem;
 }
 
-
 .csb-department {
-	padding: 1rem;
-	background: #b1c0e0;
-	height: 2rem;
+  padding: 1rem;
+  background: #b1c0e0;
+  height: 2rem;
 }
 
 .course-card .kingster-sidebar-area select {
-	border: none;
+  border: none;
 }
 
 /* form styles */
-
 /*search icon*/
-
 .search input {
-	display: block;
-	width: 90%;
-	height: 3rem;
-	opacity:.85;
-	background: #565c73;
-	border: none !important;
-	border-radius: 0 4px 4px 0;
-	font-size: 1.70rem;
-	margin: 1rem auto 2rem auto;
-	z-index: 1 !important;
-	padding: 2rem !important;
+  display: block;
+  width: 90%;
+  height: 3rem;
+  background: #565c73;
+  border: none !important;
+  border-radius: 0 4px 4px 0;
+  font-size: 1.70rem;
+  margin: 1rem auto 2rem auto;
+  z-index: 1 !important;
+  padding: 2rem !important;
 }
 
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
   color: silver !important;
 }
-::-moz-placeholder { /* Firefox 19+ */
+
+::-moz-placeholder {
+  /* Firefox 19+ */
   color: silver !important;
 }
-:-ms-input-placeholder { /* IE 10+ */
+
+:-ms-input-placeholder {
+  /* IE 10+ */
   color: silver !important;
 }
-:-moz-placeholder { /* Firefox 18- */
+
+:-moz-placeholder {
+  /* Firefox 18- */
   color: silver !important;
 }
 
@@ -376,33 +370,35 @@ p.lead {
 }
 
 #magnifying {
-	background-color: #565c73;
-	opacity: .85;
-	color: white;
-	float: left;
-	width: 4.02rem;
-	height: 4.02rem;
-	padding: .75rem 1.3rem 1.3rem 1.3rem;
+  border-radius: 4px 0 0 4px;
+  background-color: #565c73;
+  color: white;
+  float: left;
+  width: 4.02rem;
+  height: 4.02rem;
+  margin-right: -30px;
+  padding: .75rem 1.3rem 1.3rem 1.3rem;
+	z-index: 100000;
 }
 
 #magnifying:before {
-	content: "\f002";
-	font-family: "FontAwesome";
-	font-size: 1.5rem;
+  content: "\f002";
+  font-family: "FontAwesome";
+  font-size: 1.5rem;
 }
 
 .lightgray {
-	color: silver;
+  color: silver;
 }
 
 #course-search-box {
-	padding-top: 2.5rem;
+  padding-top: 2.5rem;
 }
 
 #course-search-box .form-group {
-	background: #5f687e !important;
-	padding:.3rem !important;
-	margin-bottom: 1.5rem !important;
+  background: #5f687e !important;
+  padding: .3rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 #csb-department,
@@ -411,78 +407,82 @@ p.lead {
 #csb-schedule,
 #csb-credits,
 #csb-course-name {
-	background: transparent !important;
-	color: white !important;
-	height: 2.5rem !important;
-	width: 100% !important;
-	font-size: 1rem !important;
-	border: none !important;
-	-webkit-appearance: none !important;
--moz-appearance: none !important;
-appearance: none !important;
-	padding:0 0.65em !important;
-	cursor: pointer;
+  background: transparent !important;
+  color: white !important;
+  height: 2.5rem !important;
+  width: 100% !important;
+  font-size: 1rem !important;
+  border: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  padding: 0 0.65em !important;
+  cursor: pointer;
 }
 
 #csb-department select:after,
 #csb-instructor select:after {
-	content: "\f002";
-	font-family: fontAwesome !important;
-	font-size: 1rem !important;
-	color: white !important;
-	margin-right: -40px;
+  content: "\f002";
+  font-family: fontAwesome !important;
+  font-size: 1rem !important;
+  color: white !important;
+  margin-right: -40px;
 }
 
 #search-text {
-	color: white;
+  color: white;
 }
 
 input:-internal-autofill-selected {
-	background: #565c73 !important;
-	color: white !important;
+  background: #565c73 !important;
+  color: white !important;
 }
 
 #clear-search {
-	text-align: right;
-	color: #007cba;
-	margin-top: -50px !important;
+  text-align: right;
+  color: #007cba;
+  margin-top: -50px !important;
 }
 
 #clear-search button {
-	margin-right: 40px;
-	margin-bottom: 15px;
-	padding: 1rem;
-	border: 1px solid lightgray;
-	background-color: white;
-	cursor: pointer;
-	font-size: 1rem;
-	border-radius: 4px;
+  margin-right: 40px;
+  margin-bottom: 15px;
+  padding: 1rem;
+  border: 1px solid lightgray;
+  background-color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
 }
 
 #show-hide-container {
-	width: 95%;
-	margin: -1.5rem 1rem 2rem 0;
-	cursor: pointer;
+  width: 95%;
+  margin: -1.5rem 1rem 2rem 0;
+  cursor: pointer;
 }
 
 /* Reset filters button */
 #course-search-box p {
-	text-align: center;
+  text-align: center;
 }
 
 #reset-the-filters,
 #reset-the-filters i {
-	margin-top: -1.4rem !important;
-	color: #56ce8e !important;
-	cursor: pointer;
+  margin-top: -1.4rem !important;
+  color: #56ce8e !important;
+  cursor: pointer;
 }
 
 .link-green {
-	color: #00843d;
+  color: #00843d;
 }
 
 .text-right {
-	text-align: right !important;
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
 }
 
 input:-webkit-autofill,
@@ -498,45 +498,56 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: white;
   -webkit-box-shadow: 0 0 0px 1000px #565c73 inset;
   transition: background-color 5000s ease-in-out 0s;
-	font-size: 1.7rem !important;
+  font-size: 1.7rem !important;
 }
 
 input:focus, textarea:focus, select:focus {
-	outline: none !important;
-	box-shadow: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /*adjusting for media*/
 @media screen and (max-width: 1024px) and (min-width: 568px) {
-.course-card {
-	width: 46%;
+  .course-card {
+    width: 46%;
+		min-height: 425px !important;
+  }
+
+  #magnifying {
+    display: none;
+  }
+
+  .search input {
+    border-radius: 4px !important;
+  }
 }
-	#magnifying {
-		display: none;
-	}
-	
-		.search input {
-		border-radius: 4px !important;
-	}
-	
-	
-	
-}
 
-@media screen and (max-width: 567px){
-	.course-card{
-		width: 100%;
-	}
-	
-	#magnifying {
-		display: none;
-	}
-	
-	.search input {
-		border-radius: 4px !important;
-	}
+@media screen and (max-width: 567px) {
+  .course-card {
+    width: 99%;
+		min-height: 425px !important;
+  }
 
+  #magnifying {
+    display: none;
+  }
 
+  .search input {
+    border-radius: 4px !important;
+  }
 }
 
 
+.kingster-footer-back-to-top-button {
+	height: 60px;
+	width: 60px;
+	bottom: 40%;
+	font-size: larger;
+	border-radius: 4px;
+	right: 0;
+	background: #202e49;
+}
+
+.kingster-footer-back-to-top-button i {
+	color: white;
+}
