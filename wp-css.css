@@ -171,11 +171,11 @@ h2.office-name {
   border-radius: 8px;
   margin-bottom: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 31%;
+  width: 46%;
   float: left;
   margin-right: .5rem;
   margin-left: .5rem;
-	min-height: 425px;
+	min-height: 475px;
 }
 
 .course-header {
@@ -241,7 +241,7 @@ p.lead {
   font-style: normal;
   font-weight: normal;
   text-decoration: inherit;
-  font-size: .9rem;
+  font-size: 1.1rem;
 }
 
 .course-title {
@@ -251,11 +251,11 @@ p.lead {
 
 .course-title h4 {
   margin-bottom: .5rem;
-  font-size: larger !important;
+  font-size: 1.6rem !important;
 }
 
 .course-title p.lead {
-  font-size: .95rem;
+  font-size: 1.1rem;
 }
 
 .course-instructor h5 {
@@ -263,7 +263,7 @@ p.lead {
   color: aliceblue !important;
   opacity: .5;
   margin-top: .25rem;
-  font-size: 95%;
+	font-size: 1.1rem;
 }
 
 .opacity-half {
@@ -340,7 +340,7 @@ p.lead {
   border: none !important;
   border-radius: 0 4px 4px 0;
   font-size: 1.70rem;
-  margin: 1rem auto 2rem auto;
+  margin: 1rem auto 0;
   z-index: 1 !important;
   padding: 2rem !important;
 }
@@ -398,7 +398,7 @@ p.lead {
 #course-search-box .form-group {
   background: #5f687e !important;
   padding: .3rem !important;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1rem !important;
 }
 
 #csb-department,
@@ -447,6 +447,16 @@ input:-internal-autofill-selected {
 #clear-search button {
   margin-right: 40px;
   margin-bottom: 15px;
+  padding: 1rem;
+  border: 1px solid lightgray;
+  background-color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.show-description button {
+  margin: 1rem 0 0 0;
   padding: 1rem;
   border: 1px solid lightgray;
   background-color: white;
@@ -509,8 +519,8 @@ input:focus, textarea:focus, select:focus {
 /*adjusting for media*/
 @media screen and (max-width: 1024px) and (min-width: 568px) {
   .course-card {
-    width: 46%;
-		min-height: 425px !important;
+    width: 99%;
+		min-height: 475px !important;
   }
 
   #magnifying {
@@ -520,12 +530,17 @@ input:focus, textarea:focus, select:focus {
   .search input {
     border-radius: 4px !important;
   }
+
+	#course-description-modal {
+	max-height: calc(100vh - 50px);
+    overflow-y: auto;
+	}
 }
 
 @media screen and (max-width: 567px) {
   .course-card {
     width: 99%;
-		min-height: 425px !important;
+		min-height: 475px !important;
   }
 
   #magnifying {
@@ -535,6 +550,12 @@ input:focus, textarea:focus, select:focus {
   .search input {
     border-radius: 4px !important;
   }
+
+	#course-description-modal {
+	max-height: calc(100vh - 50px);
+    overflow-y: auto;
+	}
+
 }
 
 
@@ -545,9 +566,38 @@ input:focus, textarea:focus, select:focus {
 	font-size: larger;
 	border-radius: 4px;
 	right: 0;
-	background: #202e49;
+	background: #00843d;
 }
 
 .kingster-footer-back-to-top-button i {
 	color: white;
+	font-size: 32px !Important;
+}
+
+.line-height-1 {
+	line-height: .5 !important;
+}
+
+/* modal section */
+.backdrop {
+	display:none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .7);
+	z-index: 1;
+}
+
+#course-description-modal {
+	display:none;
+	position: fixed;
+	z-index: 1000;
+	top: 100px;
+	left: 20%;
+	width: 60%;
+	background: white;
+	padding: 2rem;
+	line-height: 1 !important;
 }

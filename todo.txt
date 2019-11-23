@@ -10,13 +10,13 @@ Dropdown Bar:
   - Typing in search field, clear all dropdown bars (DONE)
   - getting a blue on the search bar (DONE)
 - Adjust to mobile layout (DONE)
+- Fix the calendar data: (DONE)
+  - Parse html -- need to add back in and delete the garbage. (Talk to Sonia about options; our best thinking is to get the query to pull in unique values that we can use to populate the template fields, rather than trying to parse complicated and variable data with REGEX)
+- Is any text that needs to be a the top or bottom of the page? (PROBABLY NOT--can be added later)
 ------------------------------------------------------------------------------
 
 STILL TO DO
 
-- Fix the calendar data:
-  - Parse html -- need to add back in and delete the garbage. (Talk to Sonia about options; our best thinking is to get the query to pull in unique values that we can use to populate the template fields, rather than trying to parse complicated and variable data with REGEX)
-- Is any text that needs to be a the top or bottom of the page?
 - Explain the dropdowns at the bottom of the page (we can fix this but need another day)
 
 - Push to production

@@ -7,16 +7,12 @@
 <input id="search-text" autocomplete="off" type="text" autofocus="" placeholder="Search" />
 
 </form></div>
-<div>
-<p id="show-hide-container" class="text-right link-green"><i class="fa fa-eye" aria-hidden="true"></i>  <span id="show-hide-label">Show</span> Descriptions</p>
-
-</div>
 [jsoncontentimporter url=https://summeronline-dcnd.s3.amazonaws.com/prod/course_catalog.json]
 <div class="course-card">
 <div class="course-header">
 <div class="course-title">
-<h4 class="white"><span class="department-code">{department_code}</span> {course_number}</h4>
-<p class="lead white">{title}</p>
+<h4 id="modal-class-header" class="white"><span class="department-code">{department_code}</span> {course_number}</h4>
+<p class="lead white modal-title">{title}</p>
 
 <div class="course-instructor">
 <h5>{all_instructors}</h5>
@@ -33,12 +29,22 @@
 </ul>
 </div>
 <div class="course-description">
-<p class="toggle-description link-green text-center">Course Description <i id="what-carat" class="fa fa-info-circle" aria-hidden="true"></i></p>
+<p class="show-description text-center"><button class="link-green"><i id="what-carat" class="fa fa-info-circle" aria-hidden="true"></i> Details</button></p>
 
-<div class="description-text">{course_description}</div>
+<div class="description-text">
+<h5>{department_code} {course_number} | {title}</h5>
+{all_instructors}
+
+<small style="line-height: 1 !important;">{course_description}</small>
+
+</div>
 </div>
 </div>
 [/jsoncontentimporter]
-
+<div class="backdrop"></div>
+<!--Modal Card-->
+<div id="course-description-modal"><i class="fa fa-fw fa-times-circle-o fa-2x"></i>
+<div class="course-info"></div>
+</div>
 </div>
 <!--all-stuff closes-->

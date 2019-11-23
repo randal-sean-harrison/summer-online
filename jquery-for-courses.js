@@ -33,10 +33,10 @@ jQuery(document).ready(function() {
   });
 
   // Toggle the descriptions
-  jQuery(".toggle-description").on("click", function() {
-    jQuery(this).next("div").slideToggle("fast");
-    return false;
-  });
+  // jQuery(".toggle-description").on("click", function() {
+  //   jQuery(this).next("div").slideToggle("fast");
+  //   return false;
+  // });
 
   // Reset all the search Filters
   jQuery("#reset-the-filters").on("click", function() {
@@ -85,7 +85,9 @@ jQuery(document).ready(function() {
   // Get an array of all instructors
   var allInstructors = [];
   jQuery('.course-instructor h5').each(function(i, e) {
-    allInstructors.push(jQuery(e).text());
+    if (jQuery(e).text() != "") {
+      allInstructors.push(jQuery(e).text());
+    }
   });
   // sort the array
   allInstructors.sort();
@@ -117,7 +119,9 @@ jQuery(document).ready(function() {
   // Get an array of all disciplines
   var allCourseName = [];
   jQuery('.cd-department').each(function(i, e) {
-    allCourseName.push(jQuery(e).text());
+    if (jQuery(e).text() != "") {
+        allCourseName.push(jQuery(e).text());
+      }
   });
   // sort the array
   allCourseName.sort();
@@ -130,11 +134,21 @@ jQuery(document).ready(function() {
 
   // --------------------------------------------------------
 
+  // Put TBD for courses that have no instructor assigned
+  jQuery('.course-instructor h5').each(function(i, e) {
+    if(jQuery(e).text() == "") {
+      jQuery(e).text("TBD");
+    }
+  });
+
+    // --------------------------------------------------------
+
   // Get an array of course names
   var allCourses = [];
   jQuery('.course-title p').each(function(i, e) {
-
-    allCourses.push(jQuery(e).text());
+    if (jQuery(e).text() != "") {
+      allCourses.push(jQuery(e).text());
+    }
   });
 
   // sort the array
@@ -159,7 +173,7 @@ jQuery(document).ready(function() {
   jQuery("#csb-instructor").on("change", function() {
 
     // Clear the search text
-    jQuery("#search-text").val("")
+    jQuery("#search-text").val("");
     // show all the cards
     jQuery(".course-card").fadeIn();
 
@@ -180,7 +194,7 @@ jQuery(document).ready(function() {
   jQuery("#csb-title").on("change", function() {
 
     // Clear the search text
-    jQuery("#search-text").val("")
+    jQuery("#search-text").val("");
     // show all the cards
     jQuery(".course-card").fadeIn();
 
@@ -201,7 +215,7 @@ jQuery(document).ready(function() {
   jQuery("#csb-credits").on("change", function() {
 
     // Clear the search text
-    jQuery("#search-text").val("")
+    jQuery("#search-text").val("");
     // show all the cards
     jQuery(".course-card").fadeIn();
 
@@ -222,7 +236,7 @@ jQuery(document).ready(function() {
   jQuery("#csb-course-name").on("change", function() {
 
     // Clear the search text
-    jQuery("#search-text").val("")
+    jQuery("#search-text").val("");
     // show all the cards
     jQuery(".course-card").fadeIn();
 
@@ -246,7 +260,7 @@ jQuery(document).ready(function() {
   // Parse the date format to remove the 2019 and turn the hyphens into slashes
   for (var l = 0; l < 2; l++) {
     jQuery(".cd-date").text(function() {
-      return jQuery(this).text().replace("2019-", "");
+      return jQuery(this).text().replace("2020-", "").replace("00:00:00 UTC", "");
     });
   }
 
@@ -301,23 +315,40 @@ jQuery(document).ready(function() {
   });
 
   // Parse the string return from html for descriptions
-  jQuery('.decription-text').each(function(i, e) {
-    jQuery(this).html(jQuery(this).text());
-  });
-
+  // jQuery('.description-text').each(function(i, e) {
+  //   jQuery(this).html(jQuery(this).text());
+  // });
 
   jQuery(".fa-angle-up").removeClass("fa-angle-up").addClass("fa-caret-up").addClass("fa-2x");
 
+  // Put the course description in the modal
+  jQuery(".show-description").on("click", function() {
+    var textToMove = jQuery(this).next("div").html();
 
-  // Remove the stupid capital P elements
-  // jQuery(".cd-date").text(function() {
-  //   return jQuery(this).text().replace("<P>", "");
-  // });
+    // Move the text and the title to the modal
+    jQuery(".course-info").html(textToMove);
+    // jQuery(".course-name-modal").html(titleToMove);
 
-  // Remove the stupid b (deprecated) bold elements
-  // jQuery(".cd-date").text(function() {
-  //   return jQuery(this).text().replace("<b>", "");
-  // });
+    // Show the backdrop
+    jQuery(".backdrop").css("display", "block");
+
+    // Show the modal
+    jQuery("#course-description-modal").fadeToggle();
+
+
+    // close modal function
+    function closeModal() {
+      jQuery(".backdrop").fadeOut();
+      jQuery("#course-description-modal").fadeOut();
+    }
+
+    // Close the modal when you click on the backdrop
+    jQuery(".backdrop").on("click", closeModal);
+
+    // Close the modal with the modal-close-button
+    jQuery(".modal-close-button").on("click", closeModal);
+
+  });
 
 });
 // document.ready
