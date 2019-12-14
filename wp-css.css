@@ -1,23 +1,30 @@
+/*
+
+This is the entire current CSS for the WPEngine Summer Online site
+
+*/
+
+/** Font Styling **/
 @font-face {
   font-family: 'Galaxie Polaris Medium';
-  src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolaris-Medium.eot');
-  src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolaris-Medium.ttf') format('truetype');
+  src: url('http://summeronline.nd.edu/wp-content/uploads/2018/11/GalaxiePolaris-Medium.eot');
+  src: url('http://summeronline.nd.edu/wp-content/uploads/2018/11/GalaxiePolaris-Medium.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Galaxie Polaris Book';
-  src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolaris-Book.eot') !important;
-  src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolaris-Book.ttf') format('truetype') !important;
+  src: url('http://summeronline.nd.edu/wp-content/uploads/2018/11/GalaxiePolaris-Book.eot') !important;
+  src: url('http://summeronline.nd.edu/wp-content/uploads/2018/11/GalaxiePolaris-Book.ttf') format('truetype') !important;
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Galaxie Polaris Condensed';
-  src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolarisCondensed-Bold.eot');
-  src: url('http://ndsol.wpengine.com/wp-content/uploads/2018/11/GalaxiePolarisCondensed-Bold.ttf') format('truetype');
+  src: url('http://summeronline.nd.edu/wp-content/uploads/2018/11/GalaxiePolarisCondensed-Bold.eot');
+  src: url('http://summeronline.nd.edu/wp-content/uploads/2018/11/GalaxiePolarisCondensed-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
@@ -98,11 +105,13 @@ h1, h2, h3, h4, h5, h6, .tp-caption {
   }
 }
 
+/** footer styling **/
 #copyright-footer a:hover {
   color: #00843D !important;
   text-decoration: underline;
 }
 
+/** FAQ styling **/
 div.ufaq-faq-post p,
 div.ufaq-faq-post p span {
   font-weight: normal !important;
@@ -155,7 +164,7 @@ a.better-button:focus, a.better-button:hover {
   font-weight: 500 !important;
 }
 
-/** styling page titles for readability **/
+/** styling headings for readability **/
 h1.kingster-page-title {
   font-size: 4rem !important;
 }
@@ -165,7 +174,7 @@ h2.office-name {
   margin-bottom: 0.5rem;
 }
 
-/* Styles for the courses page */
+/* Styles for the courses page -------------------------------------------*/
 .course-card {
   border: 1px solid lightgray;
   border-radius: 8px;
@@ -175,7 +184,7 @@ h2.office-name {
   float: left;
   margin-right: .5rem;
   margin-left: .5rem;
-	min-height: 475px;
+  min-height: 475px;
 }
 
 .course-header {
@@ -263,7 +272,7 @@ p.lead {
   color: aliceblue !important;
   opacity: .5;
   margin-top: .25rem;
-	font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 .opacity-half {
@@ -295,7 +304,7 @@ p.lead {
 }
 
 .cd-time:before {
-  content: "\f017\00a0\00a0";
+  content: "\f073\00a0\00a0";
 }
 
 /* Course search box */
@@ -333,6 +342,19 @@ p.lead {
 /* form styles */
 /*search icon*/
 .search input {
+  display: block;
+  width: 91%;
+  height: 3rem;
+  background: #565c73;
+  border: none !important;
+  border-radius: 0 4px 4px 0;
+  font-size: 1.70rem;
+  margin: 1rem auto 0;
+  z-index: 1 !important;
+  padding: 2rem !important;
+}
+
+.search2 input {
   display: block;
   width: 90%;
   height: 3rem;
@@ -375,16 +397,39 @@ p.lead {
   color: white;
   float: left;
   width: 4.02rem;
-  height: 4.02rem;
+  height: 4.0rem;
   margin-right: -30px;
   padding: .75rem 1.3rem 1.3rem 1.3rem;
-	z-index: 100000;
+  z-index: 100000;
 }
 
 #magnifying:before {
   content: "\f002";
   font-family: "FontAwesome";
   font-size: 1.5rem;
+}
+
+#magnifying2 {
+  border-radius: 4px 0 0 4px;
+  background-color: #565c73;
+  color: white;
+  float: left;
+  width: 4.02rem;
+  height: 4.0rem;
+  margin-right: -30px;
+  padding: .75rem 1.3rem 1.3rem 1.3rem;
+  z-index: 100000;
+}
+
+#magnifying2:before {
+  content: "\f002";
+  font-family: "FontAwesome";
+  font-size: 1.5rem;
+}
+
+#reset-the-filters2,
+#reset-the-filters2 i {
+  display: none;
 }
 
 .lightgray {
@@ -401,10 +446,20 @@ p.lead {
   margin-bottom: 1rem !important;
 }
 
+#csb-course-name2,
+#csb-instructor2,
+#csb-title2,
+#csb-credits2 {
+  display: none;
+}
+
+#course-search-box2 label {
+  display: none;
+}
+
 #csb-department,
 #csb-instructor,
 #csb-title,
-#csb-schedule,
 #csb-credits,
 #csb-course-name {
   background: transparent !important;
@@ -421,7 +476,9 @@ p.lead {
 }
 
 #csb-department select:after,
-#csb-instructor select:after {
+#csb-instructor select:after,
+#csb-department2 select:after,
+#csb-instructor2 select:after {
   content: "\f002";
   font-family: fontAwesome !important;
   font-size: 1rem !important;
@@ -433,6 +490,10 @@ p.lead {
   color: white;
 }
 
+#search-text2 {
+  color: white;
+}
+
 input:-internal-autofill-selected {
   background: #565c73 !important;
   color: white !important;
@@ -441,7 +502,7 @@ input:-internal-autofill-selected {
 #clear-search {
   text-align: right;
   color: #007cba;
-  margin-top: -50px !important;
+  margin-top: 1rem !important;
 }
 
 #clear-search button {
@@ -455,9 +516,9 @@ input:-internal-autofill-selected {
   border-radius: 4px;
 }
 
-.show-description button {
+.card-button {
   margin: 1rem 0 0 0;
-  padding: 1rem;
+  padding: .8rem;
   border: 1px solid lightgray;
   background-color: white;
   cursor: pointer;
@@ -484,7 +545,7 @@ input:-internal-autofill-selected {
 }
 
 .link-green {
-  color: #00843d;
+  color: #00843d !important;
 }
 
 .text-right {
@@ -493,6 +554,10 @@ input:-internal-autofill-selected {
 
 .text-center {
   text-align: center !important;
+}
+
+.search2 {
+  display: none;
 }
 
 input:-webkit-autofill,
@@ -518,86 +583,238 @@ input:focus, textarea:focus, select:focus {
 
 /*adjusting for media*/
 @media screen and (max-width: 1024px) and (min-width: 568px) {
+  .search {
+    display: none;
+  }
+
+  #course-search-box {
+    display: none;
+  }
+
+  #course-search-box2 {
+    display: block;
+    padding-top: 2.5rem;
+  }
+
+  #reset-the-filters2,
+  #reset-the-filters2 i {
+    color: #56ce8e !important;
+    cursor: pointer;
+  }
+
+  /* Course search box2 */
+  #course-search-box2 {
+    background-image: url("https://ndsol.wpengine.com/wp-content/uploads/2018/08/search-bg-2.jpg") !important;
+    padding: 1rem;
+  }
+
+  #course-search-box2 label {
+    color: white;
+    max-width: 325px;
+  }
+
+  #course-search-box2 .form-group {
+    background: #5f687e !important;
+    padding: .3rem !important;
+    margin-bottom: 1rem !important;
+  }
+
   .course-card {
     width: 99%;
-		min-height: 475px !important;
+    min-height: 475px !important;
   }
 
   #magnifying {
     display: none;
   }
 
+  .search2 {
+    display: block;
+    margin-top: 4rem;
+  }
+
   .search input {
     border-radius: 4px !important;
   }
 
-	#course-description-modal {
-	max-height: calc(100vh - 50px);
+  .search2 input {
+    border-radius: 4px !important;
+  }
+
+  #course-description-modal {
+    max-height: calc(100vh - 50px);
     overflow-y: auto;
-	}
+  }
+
+  #csb-department2,
+  #csb-instructor2,
+  #csb-title2,
+  #csb-credits2,
+  #csb-course-name2 {
+    background: transparent !important;
+    color: white !important;
+    height: 2.5rem !important;
+    width: 100% !important;
+    font-size: 1rem !important;
+    border: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    padding: 0 0.65em !important;
+    cursor: pointer;
+  }
+
+  #csb-course-name2,
+  #csb-instructor2,
+  #csb-title2,
+  #csb-credits2 {
+    display: block;
+  }
+
+  #course-search-box2 label {
+    display: inline;
+  }
 }
 
 @media screen and (max-width: 567px) {
+
+  #reset-the-filters2,
+  #reset-the-filters2 i {
+    color: #56ce8e !important;
+    cursor: pointer;
+  }
+
+  .search {
+    display: none;
+  }
+
+  #course-search-box {
+    display: none;
+  }
+
+  #course-search-box2 {
+    display: block;
+    padding-top: 2.5rem;
+  }
+
+
+  /* Course search box2 */
+  #course-search-box2 {
+    background-image: url("https://ndsol.wpengine.com/wp-content/uploads/2018/08/search-bg-2.jpg") !important;
+    padding: 1rem;
+  }
+
+  #course-search-box2 label {
+    color: white;
+    max-width: 325px;
+  }
+
+  #course-search-box2 .form-group {
+    background: #5f687e !important;
+    padding: .3rem !important;
+    margin-bottom: 1rem !important;
+  }
+
   .course-card {
     width: 99%;
-		min-height: 475px !important;
+    min-height: 475px !important;
   }
 
   #magnifying {
     display: none;
   }
 
+  .search2 {
+    display: block;
+    margin-top: 4rem;
+  }
+
   .search input {
     border-radius: 4px !important;
   }
 
-	#course-description-modal {
-	max-height: calc(100vh - 50px);
-    overflow-y: auto;
-	}
+  .search2 input {
+    border-radius: 4px !important;
+  }
 
+  #course-description-modal {
+    max-height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+
+  #csb-department2,
+  #csb-instructor2,
+  #csb-title2,
+  #csb-credits2,
+  #csb-course-name2 {
+    background: transparent !important;
+    color: white !important;
+    height: 2.5rem !important;
+    width: 100% !important;
+    font-size: 1rem !important;
+    border: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    padding: 0 0.65em !important;
+    cursor: pointer;
+  }
+
+  #csb-course-name2,
+  #csb-instructor2,
+  #csb-title2,
+  #csb-credits2 {
+    display: block;
+  }
+
+  #course-search-box2 label {
+    display: inline;
+  }
 }
 
-
 .kingster-footer-back-to-top-button {
-	height: 60px;
-	width: 60px;
-	bottom: 40%;
-	font-size: larger;
-	border-radius: 4px;
-	right: 0;
-	background: #00843d;
+  height: 60px;
+  width: 60px;
+  bottom: 40%;
+  font-size: larger;
+  border-radius: 4px;
+  right: 0;
+  background: #00843d;
 }
 
 .kingster-footer-back-to-top-button i {
-	color: white;
-	font-size: 32px !Important;
+  color: white;
+  font-size: 32px !Important;
 }
 
 .line-height-1 {
-	line-height: .5 !important;
+  line-height: .5 !important;
 }
 
 /* modal section */
 .backdrop {
-	display:none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, .7);
-	z-index: 1;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  z-index: 1;
 }
 
 #course-description-modal {
-	display:none;
-	position: fixed;
-	z-index: 1000;
-	top: 100px;
-	left: 20%;
-	width: 60%;
-	background: white;
-	padding: 2rem;
-	line-height: 1 !important;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 100px;
+  left: 20%;
+  width: 60%;
+  background: white;
+  padding: 2rem;
+  line-height: 1 !important;
 }
+
+.course-info h5 {
+		margin-bottom: .5rem !important;
+	}

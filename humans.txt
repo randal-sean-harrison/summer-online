@@ -3,19 +3,24 @@
    Project: Summer Online Dynamic Course Delivery from Registrars' API
    Web Design and Development
 
-   Project URL:
+   Project URL: https://summeronline.nd.edu/summer-courses
    Documentation URL: 
 
 
-	Release date: Spring, 2019
+	Release date: December, 2019
+
+      Sonia Howell, Ph.D.
+      Project Sponsor
+   	  Employed: Office of Digital Learning, University of Notre Dame
+   	  Contact: showell3@nd.edu
 
       Hannah Isaccson
-      Solution Primary Developer
+      Solution Primary Developer / Project Lead
    	  Employed: Office of Digital Learning, University of Notre Dame
    	  Contact: hisaacson21@gmail.com
 
-      Randal Sean Harrison
-      Consultant / co-developer
+      Randal Sean Harrison, Ph.D.
+      Consultant
    	  Employed: Hesburgh Libraries, University of Notre Dame
    	  Contact: rharriso@nd.edu
 
