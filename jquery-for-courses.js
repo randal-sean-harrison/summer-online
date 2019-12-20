@@ -4,7 +4,6 @@
    jQuery(".description-text").hide();
 
    // Remove these specific department level courses -----------------
-
    jQuery(".course-card").remove(":contains('64301')");
    jQuery(".course-card").remove(":contains('64305')");
    jQuery(".course-card").remove(":contains('64620')");
@@ -14,6 +13,9 @@
    jQuery(".course-card").remove(":contains('14101')");
    jQuery(".course-card").remove(":contains('14102')");
 
+   // Remove if course is inactive
+   jQuery(".course-card").remove(":contains('Sequence 99')");
+
    // Filter the page based on the typeahead search input
    jQuery("#search-text").on("keyup", function() {
 
@@ -22,7 +24,8 @@
      jQuery("#csb-title").val("all");
      jQuery("#csb-credits").val("all");
 
-     /**Stores what the user types into the search bar as variable 'value'
+     /*
+     Stores what the user types into the search bar as variable 'value'
      Function that filters through each course card and checks for word matching.
      If there is a successful match based on text, the specific course card will be left on screen.
      If not, it will be toggled off.
@@ -33,8 +36,8 @@
      });
    });
 
-   /**
-    *  (NEW-MOBILE) Filter the page based on the typeahead search input
+   /*
+    * (NEW-MOBILE) Filter the page based on the typeahead search input
     * Dropdown menu id's are distinct from the desktop users. Will toggle
     * course cards based on proper word-match.
     */
@@ -624,7 +627,6 @@
    });
 
    jQuery('.cd-time br').each(function() {
-     console.log("hello");
      jQuery(this).remove();
    });
 
