@@ -4,14 +4,14 @@
    jQuery(".description-text").hide();
 
    // Remove these specific department level courses -----------------
-   jQuery(".course-card").remove(":contains('64301')");
-   jQuery(".course-card").remove(":contains('64305')");
-   jQuery(".course-card").remove(":contains('64620')");
-   jQuery(".course-card").remove(":contains('64050')");
-   jQuery(".course-card").remove(":contains('70200')");
-   jQuery(".course-card").remove(":contains('70202')");
-   jQuery(".course-card").remove(":contains('14101')");
-   jQuery(".course-card").remove(":contains('14102')");
+   jQuery(".course-card").remove(":contains('DS 64301')");
+   jQuery(".course-card").remove(":contains('DS 64305')");
+   jQuery(".course-card").remove(":contains('DS 64620')");
+   jQuery(".course-card").remove(":contains('ROIT 64050')");
+   jQuery(".course-card").remove(":contains('EDU 70200')");
+   jQuery(".course-card").remove(":contains('EDU 70202')");
+   jQuery(".course-card").remove(":contains('ROIT 14101')");
+   jQuery(".course-card").remove(":contains('ROIT 14102')");
 
    // Remove if course is inactive
    jQuery(".course-card").remove(":contains('Sequence 99')");
