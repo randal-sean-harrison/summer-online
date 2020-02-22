@@ -12,6 +12,8 @@
    jQuery(".course-card").remove(":contains('EDU 70202')");
    jQuery(".course-card").remove(":contains('ROIT 14101')");
    jQuery(".course-card").remove(":contains('ROIT 14102')");
+   jQuery(".course-card").remove(":contains('ENGL 64050')");
+   jQuery(".course-card").remove(":contains('EDU 70201')");
 
    // Remove if course is inactive
    jQuery(".course-card").remove(":contains('Sequence 99')");
