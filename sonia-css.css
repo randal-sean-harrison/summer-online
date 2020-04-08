@@ -55,14 +55,6 @@ h1, h2, h3, h4, h5, h6, .tp-caption {
   margin-bottom: 15px;
 }
 
-#course-search-box select,
-#course-search-box2 select,
-#course-search-box select.form-control,
-#course-search-box2 select.form-control {
-  color: black !important;
-  z-index: 100;
-}
-
 @media only screen and (max-width: 599px) {
 
   /* Show and hide the different divs on small devices */
@@ -131,10 +123,6 @@ div.ufaq-faq-post p span {
   color: #ffffff !important;
 }
 
-.slategray {
-  color: slategray;
-}
-
 a {
   font-size: inherit !important;
 }
@@ -150,7 +138,7 @@ a.better-button {
   color: #ffffff;
   background-color: #00843d;
   padding: 1.2rem 1.8rem;
-  border-radius: 2px;
+  border-radius: 5px;
   font-family: "Galaxie Polaris Book", sans-serif !important;
   font-weight: bold !important;
 }
@@ -183,9 +171,9 @@ h2.office-name {
 /* Styles for the courses page -------------------------------------------*/
 .course-card {
   border: 1px solid lightgray;
-  border-radius: 3px;
+  border-radius: 8px;
   margin-bottom: 25px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 46%;
   float: left;
   margin-right: .5rem;
@@ -196,8 +184,6 @@ h2.office-name {
 .course-header {
   border-bottom-right-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
-  border-top-right-radius: 3px !important;
-  border-top-left-radius: 3px !important;
 }
 
 p.lead {
@@ -234,7 +220,7 @@ p.lead {
 
 /* course details */
 .course-header {
-  border-radius: 3px;
+  border-radius: 8px;
   background: #192f59;
   padding-top: .5rem;
   padding-left: .5rem;
@@ -308,7 +294,7 @@ p.lead {
 }
 
 .cd-times:before {
-  content: "\f073\00a0\00a0";
+  content: "f073\00a0\00a0";
 }
 
 .cd-date:before {
@@ -319,17 +305,8 @@ p.lead {
   content: "\f073\00a0\00a0";
 }
 
-.cd-attribute-codes {
-  cursor: pointer;
-}
-
 .cd-attribute-codes:before {
-  content: "\f0ca\00a0\00a0";
-  font-family: "FontAwesome";
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
-  font-size: .85rem;
+  content: "\f03a\00a0\00a0";
 }
 
 /* Course search box */
@@ -343,18 +320,12 @@ p.lead {
   max-width: 325px;
 }
 
-.cd-attribute-codes:after {
-  font-family: "Fontawesome", sans-serif;
-  content: "\00a0\00a0\f05a";
-  color: #00843d;
-}
-
 #filter-courses {
   background: #00843d;
   color: white;
   padding: .5rem;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 4px;
   font-size: 1rem;
   border: none;
   margin-top: 1rem;
@@ -378,7 +349,7 @@ p.lead {
   height: 3rem;
   background: #565c73;
   border: none !important;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 4px 4px 0;
   font-size: 1.70rem;
   margin: 1rem auto 0;
   z-index: 1 !important;
@@ -391,7 +362,7 @@ p.lead {
   height: 3rem;
   background: #565c73;
   border: none !important;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 4px 4px 0;
   font-size: 1.70rem;
   margin: 1rem auto 0;
   z-index: 1 !important;
@@ -423,7 +394,7 @@ p.lead {
 }
 
 #magnifying {
-  border-radius: 3px 0 0 3px;
+  border-radius: 4px 0 0 4px;
   background-color: #565c73;
   color: white;
   float: left;
@@ -441,7 +412,7 @@ p.lead {
 }
 
 #magnifying2 {
-  border-radius: 3px 0 0 3px;
+  border-radius: 4px 0 0 4px;
   background-color: #565c73;
   color: white;
   float: left;
@@ -453,9 +424,9 @@ p.lead {
 }
 
 @media screen and (max-width:480px) {
-  #magnifying2 {
-    display: none;
-  }
+	#magnifying2 {
+		display: none;
+	}
 }
 
 #magnifying2:before {
@@ -487,7 +458,7 @@ p.lead {
 #csb-instructor2,
 #csb-title2,
 #csb-credits2,
-#csb-attributes2 {
+#csb-attribute-codes {
   display: none;
 }
 
@@ -500,7 +471,7 @@ p.lead {
 #csb-title,
 #csb-credits,
 #csb-course-name,
-#csb-attributes {
+#csb-attribute-codes {
   background: transparent !important;
   color: white !important;
   height: 2.5rem !important;
@@ -517,9 +488,10 @@ p.lead {
 #csb-department select:after,
 #csb-instructor select:after,
 #csb-department2 select:after,
-#csb-instructor2 select:after {
+#csb-instructor2 select:after,
+#csb-attribute-codes select:after {
   content: "\f002";
-  font-family: fontAwesome !important;
+  font-family: Fontawesome !important;
   font-size: 1rem !important;
   color: white !important;
   margin-right: -40px;
@@ -542,7 +514,6 @@ input:-internal-autofill-selected {
   text-align: right;
   color: #007cba;
   margin-top: 1rem !important;
-  margin-bottom: 0;
 }
 
 #clear-search button {
@@ -553,7 +524,7 @@ input:-internal-autofill-selected {
   background-color: white;
   cursor: pointer;
   font-size: 1rem;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .card-button {
@@ -563,7 +534,7 @@ input:-internal-autofill-selected {
   background-color: white;
   cursor: pointer;
   font-size: 1rem;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 #show-hide-container {
@@ -621,13 +592,6 @@ input:focus, textarea:focus, select:focus {
   box-shadow: none !important;
 }
 
-
-#attributes-modal {
-  min-height: 300px !important;
-  max-height: 500px !important;
-  overflow-y: auto;
-}
-
 /*adjusting for media*/
 @media screen and (max-width: 1024px) and (min-width: 568px) {
   .search {
@@ -681,11 +645,11 @@ input:focus, textarea:focus, select:focus {
   }
 
   .search input {
-    border-radius: 3px !important;
+    border-radius: 4px !important;
   }
 
   .search2 input {
-    border-radius: 3px !important;
+    border-radius: 4px !important;
   }
 
   #course-description-modal {
@@ -697,8 +661,7 @@ input:focus, textarea:focus, select:focus {
   #csb-instructor2,
   #csb-title2,
   #csb-credits2,
-  #csb-course-name2,
-  #csb-attributes2 {
+  #csb-course-name2 {
     background: transparent !important;
     color: white !important;
     height: 2.5rem !important;
@@ -715,8 +678,7 @@ input:focus, textarea:focus, select:focus {
   #csb-course-name2,
   #csb-instructor2,
   #csb-title2,
-  #csb-credits2,
-  #csb-attributes2 {
+  #csb-credits2 {
     display: block;
   }
 
@@ -746,6 +708,7 @@ input:focus, textarea:focus, select:focus {
     padding-top: 2.5rem;
   }
 
+
   /* Course search box2 */
   #course-search-box2 {
     background-image: url("https://ndsol.wpengine.com/wp-content/uploads/2018/08/search-bg-2.jpg") !important;
@@ -763,12 +726,6 @@ input:focus, textarea:focus, select:focus {
     margin-bottom: 1rem !important;
   }
 
-  #course-search-box select.form-control,
-  #course-search-box2 select.form-control {
-    color: black !important;
-    z-index: 100;
-  }
-
   .course-card {
     width: 99%;
     min-height: 475px !important;
@@ -784,15 +741,14 @@ input:focus, textarea:focus, select:focus {
   }
 
   .search input {
-    border-radius: 3px !important;
+    border-radius: 4px !important;
   }
 
   .search2 input {
-    border-radius: 3px !important;
+    border-radius: 4px !important;
   }
 
-  #course-description-modal,
-  #attributes-modal {
+  #course-description-modal {
     max-height: calc(100vh - 50px);
     overflow-y: auto;
   }
@@ -801,8 +757,7 @@ input:focus, textarea:focus, select:focus {
   #csb-instructor2,
   #csb-title2,
   #csb-credits2,
-  #csb-course-name2,
-  #csb-attributes2 {
+  #csb-course-name2 {
     background: transparent !important;
     color: white !important;
     height: 2.5rem !important;
@@ -819,8 +774,7 @@ input:focus, textarea:focus, select:focus {
   #csb-course-name2,
   #csb-instructor2,
   #csb-title2,
-  #csb-credits2,
-  #csb-attributes2 {
+  #csb-credits2 {
     display: block;
   }
 
@@ -834,7 +788,7 @@ input:focus, textarea:focus, select:focus {
   width: 60px;
   bottom: 40%;
   font-size: larger;
-  border-radius: 3px;
+  border-radius: 4px;
   right: 0;
   background: #00843d;
 }
@@ -860,12 +814,11 @@ input:focus, textarea:focus, select:focus {
   z-index: 1;
 }
 
-#course-description-modal,
-#attributes-modal {
+#course-description-modal {
   display: none;
   position: fixed;
   z-index: 1000;
-  top: 200px;
+  top: 100px;
   left: 20%;
   width: 60%;
   background: white;
@@ -874,8 +827,8 @@ input:focus, textarea:focus, select:focus {
 }
 
 .course-info h5 {
-  margin-bottom: .5rem !important;
-}
+		margin-bottom: .5rem !important;
+	}
 
 .course-details-ul li {
   border-top: .5px dotted lightgray;
@@ -886,82 +839,10 @@ input:focus, textarea:focus, select:focus {
   border-top: none;
 }
 
-#attributes-table {
-  font-size: .90 !important;
-  font-weight: 500 !important;
-}
-
-#attributes-table * {
-  color: darkslategray !important;
-}
-
-#attributes-table td:first-child {
-  font-weight: bold !important;
-}
-
-#attributes-table td:last-child {
-  text-align: left !important;
-  padding: 1rem 0 1rem 2rem;
-}
-
-#attributes-table p {
-  padding: 0;
-  margin: 0;
-}
-
-#number-of-classes {
-  margin-left: 1.5rem !important;
-  color: #666666 !important;
-}
-
-/* aatributes search ------------------------------------------------- */
-#code-search-form {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-#clear-attribute-search {
-  cursor: pointer;
-  margin-top: -2.5rem;
-  margin-bottom: -1rem;
-}
-
-#code-search-form #code-search {
-	font-size: 22px;
-	padding: 1rem 1rem 1rem 6rem;
-	background: aliceblue;
-  display: block !important;
-  width: 100%;
-  border: none;
-  margin-right: 0;
-}
-
-#code-search-magnifying-glass {
-	display: inline-block;
-	width: 50px;
-	float: left;
-	padding: 1rem 1rem 1rem 1rem;
-  margin-bottom: -3.9rem;
-  margin-top: 0;
-}
-
-#code-search-form #code-search:focus {
-	background: aliceblue !important;
-}
-
-#code-search::-webkit-input-placeholder {
-  color: slategray;
-}
-#code-search::-moz-placeholder {
-  color: slategray;
-}
-#code-search:-ms-input-placeholder {
-  color: slategray;
-}
-#code-search:-moz-placeholder {
-  color: slategray;
-}
-#code-search::placeholder {
-	color: slategray;
+#course-search-box select,
+#course-search-box2 select,
+#course-search-box select.form-control,
+#course-search-box2 select.form-control {
+  color: black !important;
+	z-index: 100;
 }

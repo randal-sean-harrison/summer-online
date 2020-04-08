@@ -3,7 +3,11 @@
    // Hide the description text at start
    jQuery(".description-text").hide();
 
-   // Remove these specific department level courses -----------------
+   // Remove everything that does not have the ZODO or PCSE attribute
+   jQuery(".course-card").remove(":not(:contains('ZODO'))");
+   // jQuery(".course-card").remove(":not(:contains('PCSE'))");
+
+   // Remove these specific department level courses ---------------------------------------
    jQuery(".course-card").remove(":contains('DS 64301')");
    jQuery(".course-card").remove(":contains('DS 64305')");
    jQuery(".course-card").remove(":contains('DS 64620')");
@@ -18,13 +22,21 @@
    // Remove if course is inactive
    jQuery(".course-card").remove(":contains('Sequence 99')");
 
-   // Filter the page based on the typeahead search input
+   // Remove list items containing "education" and "italian" from dropdowns
+   jQuery("option").remove(":contains('Education')");
+   jQuery("option").remove(":contains('Italian')");
+
+   countClasses();
+
+   // Filter the page based on the typeahead search input ---------------------------------
    jQuery("#search-text").on("keyup", function() {
+
 
      jQuery("#csb-instructor").val("all");
      jQuery("#csb-course-name").val("all");
      jQuery("#csb-title").val("all");
      jQuery("#csb-credits").val("all");
+     jQuery("#csb-attributes").val("all");
 
      /*
      Stores what the user types into the search bar as variable 'value'
@@ -36,6 +48,9 @@
      jQuery(".course-card").filter(function() {
        jQuery(this).toggle(jQuery(this).text().toLowerCase().indexOf(value) > -1)
      });
+
+     countClasses();
+
    });
 
    /*
@@ -49,11 +64,16 @@
      jQuery("#csb-course-name2").val("all");
      jQuery("#csb-title2").val("all");
      jQuery("#csb-credits2").val("all");
+     jQuery("#csb-attributes2").val("all");
+
 
      var value2 = jQuery(this).val().toLowerCase();
      jQuery(".course-card").filter(function() {
        jQuery(this).toggle(jQuery(this).text().toLowerCase().indexOf(value2) > -1)
      });
+
+     countClasses();
+
    });
 
    // Clear search button
@@ -66,9 +86,13 @@
      jQuery("#csb-course-name").val("all");
      jQuery("#csb-title").val("all");
      jQuery("#csb-credits").val("all");
+     jQuery("#csb-attributes").val("all");
 
      // show all the cards
      jQuery(".course-card").fadeIn();
+
+     countClasses();
+
    });
 
    //(NEW-MOBILE) Clear search button
@@ -81,9 +105,12 @@
      jQuery("#csb-course-name2").val("all");
      jQuery("#csb-title2").val("all");
      jQuery("#csb-credits2").val("all");
+     jQuery("#csb-attributes2").val("all");
 
      // show all the cards
      jQuery(".course-card").fadeIn();
+
+     countClasses();
    });
 
    // Toggle the descriptions
@@ -98,9 +125,12 @@
      jQuery("#csb-course-name").val("all");
      jQuery("#csb-title").val("all");
      jQuery("#csb-credits").val("all");
+     jQuery("#csb-attributes").val("all");
 
      // show all the cards
      jQuery(".course-card").fadeIn();
+
+     countClasses();
 
    });
 
@@ -111,41 +141,44 @@
      jQuery("#csb-course-name2").val("all");
      jQuery("#csb-title2").val("all");
      jQuery("#csb-credits2").val("all");
+     jQuery("#csb-attributes2").val("all");
 
      // show all the cards
      jQuery(".course-card").fadeIn();
 
+     countClasses();
+
    });
 
    // Show and hide all Descriptions
-   jQuery("#show-hide-container").on("click", function() {
-     //
-
-     if (jQuery("#show-hide-container i").hasClass("fa-eye")) {
-
-       // change the eye-con
-       jQuery("#show-hide-container i").removeClass("fa-eye");
-       jQuery("#show-hide-container i").addClass("fa-eye-slash");
-
-       // change the Hide to Show
-       jQuery("#show-hide-label").text("Hide");
-
-       // hide all the panels
-       jQuery(".toggle-description").next("div").slideDown("fast");
-
-     } else {
-
-       jQuery("#show-hide-container i").removeClass("fa-eye-slash");
-       jQuery("#show-hide-container i").addClass("fa-eye");
-
-       // hide all the panels
-       jQuery(".toggle-description").next("div").slideUp("fast");
-
-       // change the show to Hide
-       jQuery("#show-hide-label").text("Show");
-     }
-
-   });
+   // jQuery("#show-hide-container").on("click", function() {
+   //   //
+   //
+   //   if (jQuery("#show-hide-container i").hasClass("fa-eye")) {
+   //
+   //     // change the eye-con
+   //     jQuery("#show-hide-container i").removeClass("fa-eye");
+   //     jQuery("#show-hide-container i").addClass("fa-eye-slash");
+   //
+   //     // change the Hide to Show
+   //     jQuery("#show-hide-label").text("Hide");
+   //
+   //     // hide all the panels
+   //     jQuery(".toggle-description").next("div").slideDown("fast");
+   //
+   //   } else {
+   //
+   //     jQuery("#show-hide-container i").removeClass("fa-eye-slash");
+   //     jQuery("#show-hide-container i").addClass("fa-eye");
+   //
+   //     // hide all the panels
+   //     jQuery(".toggle-description").next("div").slideUp("fast");
+   //
+   //     // change the show to Hide
+   //     jQuery("#show-hide-label").text("Show");
+   //   }
+   //
+   // });
 
    // --------------------------------------------------------
 
@@ -254,9 +287,8 @@
      }
    });
 
-   // --------------------------------------------------------
 
-   // Get an array of course names
+   // Get an array of course names ----------------------------------
    var allCourses = [];
    jQuery('.course-title p').each(function(i, e) {
      if (jQuery(e).text() != "") {
@@ -293,10 +325,108 @@
    // Add the instructors to the instructor ul element
    for (j = 0; j < allCourses.length; j++) {
      jQuery("#csb-title2").append("<option value='" + allCourses[j] + "'>" + allCourses[j] + "</option>");
-
    }
 
-   // Filter on instructor
+   // Get an array of attribute codes --------------------------------------------
+   var allCodes = [];
+   var simpleString = "";
+   jQuery('.cd-attribute-codes').each(function(i, e) {
+
+     if (jQuery(e).text() != "") {
+       simpleString += jQuery(e).text() + ",";
+     }
+
+   });
+
+   jQuery.each(simpleString.split(",").slice(0, -1), function(index, item) {
+     allCodes.push(item);
+   });
+
+   // sort the array
+   allCodes.sort();
+
+   // Dedupe the array
+   allCodes = jQuery.unique(allCodes);
+
+   // Add the instructors to the instructor ul element
+   for (j = 0; j < allCodes.length; j++) {
+     jQuery("#csb-attributes").append("<option value='" + allCodes[j] + "'>" + allCodes[j] + "</option>");
+   }
+
+   // Add the instructors to the instructor ul element
+   for (k = 0; k < allCodes.length; k++) {
+     jQuery("#csb-attributes2").append("<option value='" + allCodes[k] + "'>" + allCodes[k] + "</option>");
+   }
+
+   //(NEW-MOBILE) Get an array of course names
+   // var allCodes = [];
+   // jQuery('.cd-attribute-codes').each(function(i, e) {
+   //   if (jQuery(e).text() != "") {
+   //     allCodes.push(jQuery(e).text());
+   //   }
+   // });
+   //
+   // // sort the array
+   // allCodes.sort();
+   //
+   // // Dedupe the array
+   // allCodes = jQuery.unique(allCodes);
+   //
+   // // Add the instructors to the instructor ul element
+   // for (j = 0; j < allCodes.length; j++) {
+   //   jQuery("#csb-attributes2").append("<option value='" + allCodes[j] + "'>" + allCodes[j] + "</option>");
+   // }
+
+   // Filter on attribute codes -----------------------------------------
+   jQuery("#csb-attributes").on("change", function() {
+
+     // Clear the search text
+     jQuery("#search-text").val("");
+     // show all the cards
+     jQuery(".course-card").fadeIn();
+
+     // Reset all the dropdowns
+     // jQuery("#csb-instructor").val("all");
+     jQuery("#csb-course-name").val("all");
+     jQuery("#csb-title").val("all");
+     jQuery("#csb-credits").val("all");
+     jQuery("#csb-instructor").val("all");
+
+     var attributesValue = jQuery("#csb-attributes").val().toLowerCase();
+     jQuery(".course-card").filter(function() {
+       jQuery(this).toggle(jQuery(this).text().toLowerCase().indexOf(attributesValue) > -1);
+     });
+
+     countClasses();
+
+   });
+
+   // (NEW-MOBILE) Filter on attributes
+   jQuery("#csb-attributes2").on("change", function() {
+
+     // Clear the search text
+     jQuery("#search-text2").val("");
+     // show all the cards
+     jQuery(".course-card").fadeIn();
+
+     // Reset all the dropdowns
+     // jQuery("#csb-instructor").val("all");
+     jQuery("#csb-course-name2").val("all");
+     jQuery("#csb-title2").val("all");
+     jQuery("#csb-credits2").val("all");
+     jQuery("#csb-instructor2").val("all");
+
+     var attributesValue = jQuery("#csb-attributes2").val().toLowerCase();
+     jQuery(".course-card").filter(function() {
+       jQuery(this).toggle(jQuery(this).text().toLowerCase().indexOf(attributesValue) > -1);
+     });
+
+     countClasses();
+
+   });
+
+
+   // Filter on instructor -----------------------------------------
    jQuery("#csb-instructor").on("change", function() {
 
      // Clear the search text
@@ -309,11 +439,14 @@
      jQuery("#csb-course-name").val("all");
      jQuery("#csb-title").val("all");
      jQuery("#csb-credits").val("all");
+     jQuery("#csb-attributes").val("all");
 
      var instructorValue = jQuery("#csb-instructor").val().toLowerCase();
      jQuery(".course-card").filter(function() {
        jQuery(this).toggle(jQuery(this).text().toLowerCase().indexOf(instructorValue) > -1)
      });
+
+     countClasses();
 
    });
 
@@ -330,11 +463,14 @@
      jQuery("#csb-course-name2").val("all");
      jQuery("#csb-title2").val("all");
      jQuery("#csb-credits2").val("all");
+     jQuery("#csb-attributes2").val("all");
 
      var instructorValue = jQuery("#csb-instructor2").val().toLowerCase();
      jQuery(".course-card").filter(function() {
        jQuery(this).toggle(jQuery(this).text().toLowerCase().indexOf(instructorValue) > -1)
      });
+
+     countClasses();
 
    });
 
@@ -349,13 +485,16 @@
      // Reset all the dropdowns
      jQuery("#csb-instructor").val("all");
      jQuery("#csb-course-name").val("all");
-     // jQuery("#csb-title").val("all");
+     jQuery("#csb-attributes").val("all");
      jQuery("#csb-credits").val("all");
 
      var courseValue = jQuery("#csb-title").val().toLowerCase();
      jQuery(".course-card").filter(function() {
        jQuery(this).toggle(jQuery(this).text().toLowerCase().indexOf(courseValue) > -1)
      });
+
+     countClasses();
+
 
    });
 
@@ -370,13 +509,15 @@
      // Reset all the dropdowns
      jQuery("#csb-instructor2").val("all");
      jQuery("#csb-course-name2").val("all");
-     // jQuery("#csb-title").val("all");
+     jQuery("#csb-attributes2").val("all");
      jQuery("#csb-credits2").val("all");
 
      var courseValue = jQuery("#csb-title2").val().toLowerCase();
      jQuery(".course-card").filter(function() {
        jQuery(this).toggle(jQuery(this).text().toLowerCase().indexOf(courseValue) > -1)
      });
+
+     countClasses();
 
    });
 
@@ -392,12 +533,14 @@
      jQuery("#csb-instructor").val("all");
      jQuery("#csb-course-name").val("all");
      jQuery("#csb-title").val("all");
-     // jQuery("#csb-credits").val("all");
+     jQuery("#csb-attributes").val("all");
 
      var creditsValue = jQuery("#csb-credits").val().toLowerCase();
      jQuery(".course-card").filter(function() {
        jQuery(this).toggle(jQuery(this).text().toLowerCase().indexOf(creditsValue) > -1)
      });
+
+     countClasses();
 
    });
 
@@ -413,12 +556,14 @@
      jQuery("#csb-instructor2").val("all");
      jQuery("#csb-course-name2").val("all");
      jQuery("#csb-title2").val("all");
-     // jQuery("#csb-credits").val("all");
+     jQuery("#csb-attributes2").val("all");
 
      var creditsValue = jQuery("#csb-credits2").val().toLowerCase();
      jQuery(".course-card").filter(function() {
        jQuery(this).toggle(jQuery(this).text().toLowerCase().indexOf(creditsValue) > -1)
      });
+
+     countClasses();
 
    });
 
@@ -432,7 +577,7 @@
 
      // Reset all the dropdowns
      jQuery("#csb-instructor").val("all");
-     // jQuery("#csb-course-name").val("all");
+     jQuery("#csb-attributes").val("all");
      jQuery("#csb-title").val("all");
      jQuery("#csb-credits").val("all");
 
@@ -440,6 +585,8 @@
      jQuery(".course-card").filter(function() {
        jQuery(this).toggle(jQuery(this).text().toLowerCase().indexOf(courseNameValue) > -1)
      });
+
+     countClasses();
 
    });
 
@@ -453,7 +600,7 @@
 
      // Reset all the dropdowns
      jQuery("#csb-instructor2").val("all");
-     // jQuery("#csb-course-name").val("all");
+     jQuery("#csb-attributes2").val("all");
      jQuery("#csb-title2").val("all");
      jQuery("#csb-credits2").val("all");
 
@@ -461,6 +608,8 @@
      jQuery(".course-card").filter(function() {
        jQuery(this).toggle(jQuery(this).text().toLowerCase().indexOf(courseNameValue) > -1)
      });
+
+     countClasses();
 
    });
 
@@ -526,6 +675,10 @@
    });
 
    jQuery(".cd-time").text(function() {
+     return jQuery(this).text().replace(/ONLINE COURSE/g, "");
+   });
+
+   jQuery(".cd-time").text(function() {
      return jQuery(this).text().replace(/<br>/g, "");
    });
 
@@ -576,7 +729,7 @@
      }
    });
 
-   // Remove the Ps and Bs in the course-description pop ups
+   // Remove the Ps and Bs in the ription pop ups
    jQuery(".class-detail-paragraph").text(function() {
      return jQuery(this).text().replace(/<P>/gi, "");
    });
@@ -584,8 +737,6 @@
    jQuery(".class-detail-paragraph").text(function() {
      return jQuery(this).text().replace(/<b>/gi, "");
    });
-
-
 
    // Open a new window for registration button
    jQuery(".open-registration-window").on("click", function() {
@@ -614,11 +765,23 @@
      jQuery("#course-description-modal").fadeToggle();
 
 
-     // close modal function
-     function closeModal() {
-       jQuery(".backdrop").fadeOut();
-       jQuery("#course-description-modal").fadeOut();
-     }
+     // Close the modal when you click on the backdrop
+     jQuery(".backdrop").on("click", closeModal);
+
+     // Close the modal with the modal-close-button
+     jQuery(".modal-close-button").on("click", closeModal);
+
+   });
+
+   // Display the attribute codes modal
+   jQuery(".cd-attribute-codes").on("click", function() {
+
+     // Show the backdrop
+     jQuery(".backdrop").css("display", "block");
+
+     // Show the modal
+     jQuery("#attributes-modal").fadeToggle();
+
 
      // Close the modal when you click on the backdrop
      jQuery(".backdrop").on("click", closeModal);
@@ -632,9 +795,12 @@
      jQuery(this).remove();
    });
 
-   // Remove list items containing "education" and "italian" from dropdowns
-   jQuery("option").remove(":contains('Education')");
-   jQuery("option").remove(":contains('Italian')");
+   // close modal function
+   function closeModal() {
+     jQuery(".backdrop").fadeOut();
+     jQuery("#course-description-modal").fadeOut();
+     jQuery("#attributes-modal").fadeOut();
+   }
 
    // Parse the date and timeout
    // Remove the br
@@ -647,6 +813,50 @@
    //   var stringy = jQuery(this).find("span span").text();
    //   console.log(stringy);
    // });
+
+   // Replace the comma in attribute-codes with comma space --------------------------
+   jQuery(".cd-attribute-codes").text(function() {
+     return jQuery(this).text().replace(/,/gi, ", ");
+   });
+
+
+   // Attribute search ---------------------------------------------------------------
+   jQuery("#clear-attribute-search").on("click", function() {
+     jQuery("#code-search").val("");
+   });
+
+
+   // Count the number of classes (class cards) and write them to the dom -------------
+   function countClasses() {
+     var numCards = jQuery('.course-card:visible').length;
+
+     if (numCards !== 1) {
+       jQuery("#number-of-classes").html(numCards + " CLASSES");
+     } else {
+       jQuery("#number-of-classes").html(numCards + " CLASS");
+     }
+   }
+
+
+   // Attributes search functionality ------------------------------------------------
+
+   // set focus on clear search clicked
+   jQuery("#clear-attribute-search").on("click", function(){
+    // Clear the input and put focus inside the search field again
+    jQuery("#code-search").val("").focus();
+    // Show all the cards
+    jQuery(".attribute-tr").fadeIn();
+  });
+
+  // Filter functionality
+  jQuery("#code-search").on("keyup", function() {
+      var value = jQuery(this).val().toLowerCase();
+      jQuery(".attribute-tr").filter(function() {
+        jQuery(this).toggle(jQuery(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+
+
 
 
  });

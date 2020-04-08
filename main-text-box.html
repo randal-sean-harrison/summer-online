@@ -1,78 +1,126 @@
 <div class="all-stuff">
-<h3>Search Courses</h3>
-Registration for Summer 2020 classes opens on <strong>March 18, 2020</strong>. If you have any questions regarding the summer offerings, please email <a class="link-green" style="color: #00843d;" href="mailto:summeronline@nd.edu">summeronline@nd.edu</a>.
-<p id="clear-search"><button class="link-green"><i class="fa fa-refresh fa-fw link-green" aria-hidden="true"></i> Show All</button></p>
+  <h3>Search Courses</h3>
+  <p>Registration for Summer 2020 classes opens on <strong>March 18, 2020</strong>. For information on financial aid, please visit <a href="https://summersession.nd.edu/tuition-financial-aid/"
+      target="_blank">summersession.nd.edu/tuition-financial-aid</a>. If you have any questions regarding the summer offerings, please email <a class="link-green" style="color: #00843d;" href="mailto:summeronline@nd.edu">summeronline@nd.edu</a>.</p>
+  <p>Please note:</p>
+  <ul>
+    <li><strong>Graduate students</strong> can utilize their <a href="" target="_blank">Summer Tuition Scholarships</a> towards Summer Online courses.</li>
+    <li><strong>Faculty and staff</strong> may use their educational benefits towards Summer Online courses for themselves and their dependents. More information can be found on the <a
+        class="link-green" href="https://hr.nd.edu/nd-faculty-staff/forms-policies/notre-dame-educational-benefit/" target="_blank">Ask HR site</a>.</li>
+  </ul>
 
-<div class="search"><form>
-<div id="magnifying"></div>
-<input id="search-text" autocomplete="off" type="text" autofocus="" placeholder="Search" />
+  <p id="clear-search">
+    <button class="link-green"><i class="fa fa-fw fa-refresh"></i> Show All</button></p>
+  <div class="search">
+    <form>
+      <div id="magnifying"></div>
+      <input id="search-text" autocomplete="off" type="text" autofocus="" placeholder="Search" />
+    </form>
+  </div>
+  <div id="course-search-box2">
+    <p id="reset-the-filters2" class="text-right"><i class="fa fa-fw fa-refresh"></i> Reset</p>
+    <label>Department</label>
+    <div class="form-group"><select id="csb-course-name2" class="form-control" name="csb-course-name">
+        <option selected="selected" value="all">All</option>
+        <option disabled="disabled" value="divider">••••••••••••••••••••••••••••</option>
+      </select></div>
+    <label>Instructor</label>
+    <div class="form-group"><select id="csb-instructor2" class="form-control" name="csb-instructor">
+        <option selected="selected" value="all">All</option>
+        <option disabled="disabled" value="divider">•••••••••••••••••••</option>
+      </select></div>
+    <label>Credits</label>
+    <div class="form-group"><select id="csb-credits2" class="form-control" name="csb-credits">
+        <option selected="selected" value="all">All</option>
+        <option disabled="disabled" value="divider">•••••••••••••••••••</option>
+      </select></div>
+    <label>Subject</label>
+    <div class="form-group"><select id="csb-title2" class="form-control" name="csb-title">
+        <option selected="selected" value="all">All</option>
+        <option disabled="disabled" value="divider">•••••••••••••••••••</option>
+      </select></div>
+    <label>Attributes</label>
+    <div class="form-group"><select id="csb-attributes2" class="form-control" name="csb-attributes">
+        <option selected="selected" value="all">All</option>
+        <option disabled="disabled" value="divider">•••••••••••••••••••</option>
+      </select></div>
 
-</form></div>
-<div id="course-search-box2">
-<p id="reset-the-filters2" class="text-right"><i class="fa fa-fw fa-refresh"></i> Reset</p>
-<label>Department</label>
-<div class="form-group"><select id="csb-course-name2" class="form-control" name="csb-course-name">
-<option selected="selected" value="all">All</option>
-<option disabled="disabled" value="divider">------------------------</option>
-</select></div>
-<label>Instructor</label>
-<div class="form-group"><select id="csb-instructor2" class="form-control" name="csb-instructor">
-<option selected="selected" value="all">All</option>
-<option disabled="disabled" value="divider">------------------------</option>
-</select></div>
-<label>Credits</label>
-<div class="form-group"><select id="csb-credits2" class="form-control" name="csb-credits">
-<option selected="selected" value="all">All</option>
-<option disabled="disabled" value="divider">------------------------</option>
-</select></div>
-<label>Subject</label>
-<div class="form-group"><select id="csb-title2" class="form-control" name="csb-title">
-<option selected="selected" value="all">All</option>
-<option disabled="disabled" value="divider">------------------------</option>
-</select></div>
-<div class="search2"><form>
-<div id="magnifying2"></div>
-<input id="search-text2" autocomplete="off" type="text" autofocus="" placeholder="Search" />
+    <div class="search2">
+      <form>
+        <div id="magnifying2"></div>
+        <input id="search-text2" autocomplete="off" type="text" autofocus="" placeholder="Search" />
 
-</form></div>
-</div>
-[jsoncontentimporter url=https://summeronline-dcnd.s3.amazonaws.com/prod/course_catalog.json]
-<div class="course-card">
-<div class="course-header">
-<div class="course-title">
-<h4 id="modal-class-header" class="white"><span class="department-code">{subject_code}</span> {course_number}</h4>
-<p class="lead white modal-title">{title}</p>
+      </form>
+    </div>
+  </div>
 
-<div class="course-instructor">
-<h5>{all_instructors}</h5>
-</div>
-</div>
-</div>
-<div class="course-details">
-<ul class="course-details-ul">
- 	<li class="cd-department">{subject_desc}</li>
- 	<li class="cd-credits">{credit_hr_low} credits</li>
- 	<li class="cd-crn">CRN {crn}</li>
- 	<li class="cd-enrollment">{crn_enrollment} of {crn_max_enrollment} enrolled</li>
- 	<li class="cd-time">{meeting_times}</li>
-  <li class="sequence-number" style="display: none">Sequence {sequence_number}</li>
-</ul>
-</div>
-<div class="course-description">
-<p class="text-center"><button class="card-button open-registration-window link-green" style="margin-right: .75rem;"><i id="registration-button" class="fa fa-graduation-cap" aria-hidden="true"></i> Register</button><button class="card-button show-description link-green"><i id="what-carat" class="fa fa-info-circle" aria-hidden="true"></i> Details</button></p>
+  <!-- Show the number of classes being filtered -->
+  <h6 id="number-of-classes"></h6>
 
-<div class="description-text">
-<h5>{department_code} {course_number} | {title}</h5>
-<h6>{all_instructors}</h6>
-<span class="class-detail-paragraph" style="line-height: 1 !important;">{course_description}</span>
+  [jsoncontentimporter url=https://summeronline-dcnd.s3.amazonaws.com/prod/course_catalog.json]
+  <div class="course-card">
+    <div class="course-header">
+      <div class="course-title">
+        <h4 id="modal-class-header" class="white"><span class="department-code">{subject_code}</span> {course_number}</h4>
+        <p class="lead white modal-title">{title}</p>
 
-</div>
-</div>
-</div>
-[/jsoncontentimporter]
-<div class="backdrop"></div>
-<!--Modal Card-->
-<div id="course-description-modal">
-<div class="course-info"></div>
-</div>
+        <div class="course-instructor">
+          <h5>{all_instructors}</h5>
+        </div>
+      </div>
+    </div>
+    <div class="course-details">
+      <ul class="course-details-ul">
+        <li class="cd-department">{subject_desc}</li>
+        <li class="cd-credits">{credit_hr_low} credits</li>
+        <li class="cd-crn">CRN {crn}</li>
+        <li class="cd-enrollment">{crn_enrollment} of {crn_max_enrollment} enrolled</li>
+        <li class="cd-time">{meeting_times}</li>
+        <li class="cd-attribute-codes">{attribute_codes}</li>
+      </ul>
+    </div>
+    <div class="course-description">
+      <p class="text-center"><button class="card-button open-registration-window link-green" style="margin-right: .75rem;"><i id="registration-button" class="fa fa-graduation-cap" aria-hidden="true"></i> Register</button><button
+          class="card-button show-description link-green"><i id="what-carat" class="fa fa-info-circle" aria-hidden="true"></i> Details</button></p>
+
+      <div class="description-text">
+        <h5>{department_code} {course_number} | {title}</h5>
+        <h6>{all_instructors}</h6>
+        <span class="class-detail-paragraph" style="line-height: 1 !important;">{course_description}</span>
+
+      </div>
+    </div>
+  </div>
+  [/jsoncontentimporter]
+  <div class="backdrop"></div>
+  <!--Modal Card for descriptions -->
+  <div id="course-description-modal">
+    <div class="course-info"></div>
+  </div>
+  <!-- Modal card for attributes -->
+  <div id="attributes-modal">
+    <div class="attributes-head">
+      <h4>Course Attribute Codes</h4>
+    </div>
+    <div class="attributes-info">
+      <form id="code-search-form">
+        <label for="glossary-search"></label>
+          <p id="code-search-magnifying-glass"><i class="fa fa-search fa-2x slategray"></i></p>
+          <input name="code-search" type="text" autofocus="autofocus" id="code-search" autocomplete="off" placeholder="Search">
+      </form>
+      <p id="clear-attribute-search" class="link-green text-right">Clear Search</p>
+      <table id="attributes-table">
+        [jsoncontentimporter url=https://summeronline-dcnd.s3.amazonaws.com/prod/attributes.json]
+        <tr class="attribute-tr">
+          <td>
+            {attribute_code}
+          </td>
+          <td>
+            {attribute_description}
+          </td>
+        </tr>
+        [/jsoncontentimporter]
+      </table>
+    </div>
+  </div>
 </div>
