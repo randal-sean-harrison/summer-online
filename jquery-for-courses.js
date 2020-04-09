@@ -79,7 +79,8 @@
    // Clear search button
    jQuery("#clear-search").on("click", function() {
      // clear the search text input
-     jQuery("#search-text").val("").focus();
+     jQuery("#search-text").val("");
+     jQuery("#search-text2").val("");
 
      // Reset all the dropdowns
      jQuery("#csb-instructor").val("all");
@@ -88,19 +89,7 @@
      jQuery("#csb-credits").val("all");
      jQuery("#csb-attributes").val("all");
 
-     // show all the cards
-     jQuery(".course-card").fadeIn();
-
-     countClasses();
-
-   });
-
-   //(NEW-MOBILE) Clear search button
-   jQuery("#clear-search").on("click", function() {
-     // clear the search text input
-     jQuery("#search-text").val("").focus();
-
-     // Reset all the dropdowns
+     // Rest the dropdowns for mobile
      jQuery("#csb-instructor2").val("all");
      jQuery("#csb-course-name2").val("all");
      jQuery("#csb-title2").val("all");
@@ -111,7 +100,26 @@
      jQuery(".course-card").fadeIn();
 
      countClasses();
+
    });
+
+   //(NEW-MOBILE) Clear search button
+   // jQuery("#clear-search").on("click", function() {
+   //   // clear the search text input
+   //   jQuery("#search-text").val("").focus();
+   //
+   //   // Reset all the dropdowns
+   //   jQuery("#csb-instructor2").val("all");
+   //   jQuery("#csb-course-name2").val("all");
+   //   jQuery("#csb-title2").val("all");
+   //   jQuery("#csb-credits2").val("all");
+   //   jQuery("#csb-attributes2").val("all");
+   //
+   //   // show all the cards
+   //   jQuery(".course-card").fadeIn();
+   //
+   //   countClasses();
+   // });
 
    // Toggle the descriptions
    // jQuery(".toggle-description").on("click", function() {
@@ -382,6 +390,7 @@
 
      // Clear the search text
      jQuery("#search-text").val("");
+     jQuery("#search-text2").val("");
      // show all the cards
      jQuery(".course-card").fadeIn();
 
@@ -405,6 +414,7 @@
    jQuery("#csb-attributes2").on("change", function() {
 
      // Clear the search text
+     jQuery("#search-text").val("");
      jQuery("#search-text2").val("");
      // show all the cards
      jQuery(".course-card").fadeIn();
@@ -431,6 +441,7 @@
 
      // Clear the search text
      jQuery("#search-text").val("");
+     jQuery("#search-text2").val("");
      // show all the cards
      jQuery(".course-card").fadeIn();
 
@@ -455,6 +466,7 @@
 
      // Clear the search text
      jQuery("#search-text").val("");
+     jQuery("#search-text2").val("");
      // show all the cards
      jQuery(".course-card").fadeIn();
 
@@ -479,6 +491,7 @@
 
      // Clear the search text
      jQuery("#search-text").val("");
+     jQuery("#search-text2").val("");
      // show all the cards
      jQuery(".course-card").fadeIn();
 
@@ -502,6 +515,7 @@
    jQuery("#csb-title2").on("change", function() {
 
      // Clear the search text
+     jQuery("#search-text").val("");
      jQuery("#search-text2").val("");
      // show all the cards
      jQuery(".course-card").fadeIn();
@@ -526,6 +540,7 @@
 
      // Clear the search text
      jQuery("#search-text").val("");
+     jQuery("#search-text2").val("");
      // show all the cards
      jQuery(".course-card").fadeIn();
 
@@ -549,6 +564,7 @@
 
      // Clear the search text
      jQuery("#search-text").val("");
+     jQuery("#search-text2").val("");
      // show all the cards
      jQuery(".course-card").fadeIn();
 
@@ -572,6 +588,7 @@
 
      // Clear the search text
      jQuery("#search-text").val("");
+     jQuery("#search-text2").val("");
      // show all the cards
      jQuery(".course-card").fadeIn();
 
@@ -595,6 +612,7 @@
 
      // Clear the search text
      jQuery("#search-text").val("");
+     jQuery("#search-text2").val("");
      // show all the cards
      jQuery(".course-card").fadeIn();
 
