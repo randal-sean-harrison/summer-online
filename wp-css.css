@@ -186,11 +186,11 @@ h2.office-name {
   border-radius: 3px;
   margin-bottom: 25px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  width: 46%;
+  width: 400px;
   float: left;
   margin-right: .5rem;
   margin-left: .5rem;
-  min-height: 475px;
+  min-height: 525px;
 }
 
 .course-header {
@@ -258,7 +258,7 @@ p.lead {
   font-style: normal;
   font-weight: normal;
   text-decoration: inherit;
-  font-size: 1.1rem;
+  font-size: .9rem;
 }
 
 .course-title {
@@ -272,7 +272,7 @@ p.lead {
 }
 
 .course-title p.lead {
-  font-size: 1.1rem;
+  font-size: .9rem;
 }
 
 .course-instructor h5 {
@@ -454,7 +454,7 @@ p.lead {
 
 @media screen and (max-width:480px) {
   #magnifying2 {
-    display: none;
+    /* display: none; */
   }
 }
 
@@ -466,7 +466,7 @@ p.lead {
 
 #reset-the-filters2,
 #reset-the-filters2 i {
-  display: none;
+  /* display: none; */
 }
 
 .lightgray {
@@ -488,19 +488,19 @@ p.lead {
 #csb-title2,
 #csb-credits2,
 #csb-attributes2 {
-  display: none;
+  /* display: none; */
 }
 
 #course-search-box2 label {
-  display: none;
+  /* display: none; */
 }
 
-#csb-department,
-#csb-instructor,
-#csb-title,
-#csb-credits,
-#csb-course-name,
-#csb-attributes {
+#csb-department2,
+#csb-instructor2,
+#csb-title2,
+#csb-credits2,
+#csb-course-name2,
+#csb-attributes2 {
   background: transparent !important;
   color: white !important;
   height: 2.5rem !important;
@@ -597,7 +597,7 @@ input:-internal-autofill-selected {
 }
 
 .search2 {
-  display: none;
+  /* display: none; */
 }
 
 input:-webkit-autofill,
@@ -621,214 +621,178 @@ input:focus, textarea:focus, select:focus {
   box-shadow: none !important;
 }
 
-
 #attributes-modal {
   min-height: 300px !important;
   max-height: 500px !important;
   overflow-y: auto;
 }
 
-/*adjusting for media*/
-@media screen and (max-width: 1024px) and (min-width: 568px) {
-  .search {
-    display: none;
-  }
-
-  #course-search-box {
-    display: none;
-  }
-
-  #course-search-box2 {
-    display: block;
-    padding-top: 2.5rem;
-  }
-
-  #reset-the-filters2,
-  #reset-the-filters2 i {
-    color: #56ce8e !important;
-    cursor: pointer;
-  }
-
-  /* Course search box2 */
-  #course-search-box2 {
-    background-image: url("https://ndsol.wpengine.com/wp-content/uploads/2018/08/search-bg-2.jpg") !important;
-    padding: 1rem;
-  }
-
-  #course-search-box2 label {
-    color: white;
-    max-width: 325px;
-  }
-
-  #course-search-box2 .form-group {
-    background: white !important;
-    padding: .3rem !important;
-    margin-bottom: 1rem !important;
-  }
-
-  .course-card {
-    width: 99%;
-    min-height: 475px !important;
-  }
-
-  #magnifying {
-    display: none;
-  }
-
-  .search2 {
-    display: block;
-    margin-top: 4rem;
-  }
-
-  .search input {
-    border-radius: 3px !important;
-  }
-
-  .search2 input {
-    border-radius: 3px !important;
-  }
-
-  #course-description-modal {
-    max-height: calc(100vh - 50px);
-    overflow-y: auto;
-  }
-
-  #csb-department2,
-  #csb-instructor2,
-  #csb-title2,
-  #csb-credits2,
-  #csb-course-name2,
-  #csb-attributes2 {
-    background: transparent !important;
-    color: white !important;
-    height: 2.5rem !important;
-    width: 100% !important;
-    font-size: 1rem !important;
-    border: none !important;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    appearance: none !important;
-    padding: 0 0.65em !important;
-    cursor: pointer;
-  }
-
-  #csb-course-name2,
-  #csb-instructor2,
-  #csb-title2,
-  #csb-credits2,
-  #csb-attributes2 {
-    display: block;
-  }
-
-  #course-search-box2 label {
-    display: inline;
-  }
+#course-search-box2 {
+  display: block;
+  padding-top: 2.5rem;
 }
 
-@media screen and (max-width: 567px) {
-
-  #reset-the-filters2,
-  #reset-the-filters2 i {
-    color: #56ce8e !important;
-    cursor: pointer;
-  }
-
-  .search {
-    display: none;
-  }
-
-  #course-search-box {
-    display: none;
-  }
-
-  #course-search-box2 {
-    display: block;
-    padding-top: 2.5rem;
-  }
-
-  /* Course search box2 */
-  #course-search-box2 {
-    background-image: url("https://ndsol.wpengine.com/wp-content/uploads/2018/08/search-bg-2.jpg") !important;
-    padding: 1rem;
-  }
-
-  #course-search-box2 label {
-    color: white;
-    max-width: 325px;
-  }
-
-  #course-search-box2 .form-group {
-    background: white !important;
-    padding: .3rem !important;
-    margin-bottom: 1rem !important;
-  }
-
-  #course-search-box select.form-control,
-  #course-search-box2 select.form-control {
-    color: black !important;
-    z-index: 100;
-  }
-
-  .course-card {
-    width: 99%;
-    min-height: 475px !important;
-  }
-
-  #magnifying {
-    display: none;
-  }
-
-  .search2 {
-    display: block;
-    margin-top: 4rem;
-  }
-
-  .search input {
-    border-radius: 3px !important;
-  }
-
-  .search2 input {
-    border-radius: 3px !important;
-  }
-
-  #course-description-modal,
-  #attributes-modal {
-    max-height: calc(100vh - 50px);
-    overflow-y: auto;
-  }
-
-  #csb-department2,
-  #csb-instructor2,
-  #csb-title2,
-  #csb-credits2,
-  #csb-course-name2,
-  #csb-attributes2 {
-    background: transparent !important;
-    color: white !important;
-    height: 2.5rem !important;
-    width: 100% !important;
-    font-size: 1rem !important;
-    border: none !important;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    appearance: none !important;
-    padding: 0 0.65em !important;
-    cursor: pointer;
-  }
-
-  #csb-course-name2,
-  #csb-instructor2,
-  #csb-title2,
-  #csb-credits2,
-  #csb-attributes2 {
-    display: block;
-  }
-
-  #course-search-box2 label {
-    display: inline;
-  }
+#course-search-box2 p {
+  margin-bottom: .25rem;
 }
 
+#reset-the-filters2,
+#reset-the-filters2 i {
+  color: #56ce8e !important;
+  cursor: pointer;
+}
+
+/* Course search box2 */
+#course-search-box2 {
+  background: url("https://ndsol.wpengine.com/wp-content/uploads/2018/08/search-bg-2.jpg") center cover no-repeat fixed padding-box border-box !important;
+  padding: 1rem;
+}
+
+#course-search-box2 label {
+  color: white;
+  max-width: 325px;
+}
+
+#course-search-box2 .form-group {
+  background: white !important;
+  padding: .3rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.search2 {
+  display: block;
+  margin-top: 4rem;
+}
+
+.search2 input {
+  border-radius: 3px !important;
+}
+
+#course-description-modal {
+  max-height: calc(100vh - 50px);
+  overflow-y: auto;
+}
+
+#csb-department2,
+#csb-instructor2,
+#csb-title2,
+#csb-credits2,
+#csb-course-name2,
+#csb-attributes2 {
+  background: transparent !important;
+  color: white !important;
+  height: 2.5rem !important;
+  width: 100% !important;
+  font-size: 1rem !important;
+  border: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  padding: 0 0.65em !important;
+  cursor: pointer;
+}
+
+#csb-course-name2,
+#csb-instructor2,
+#csb-title2,
+#csb-credits2,
+#csb-attributes2 {
+  display: block;
+}
+
+#course-search-box2 label {
+  display: inline;
+}
+
+#reset-the-filters2,
+#reset-the-filters2 i {
+  color: #56ce8e !important;
+  cursor: pointer;
+}
+
+.search {
+  /* display: none; */
+}
+
+#course-search-box2 {
+  display: block;
+  padding-top: 2.5rem;
+}
+
+/* Course search box2 */
+#course-search-box2 {
+  background-image: url("https://ndsol.wpengine.com/wp-content/uploads/2018/08/search-bg-2.jpg") !important;
+  padding: 1rem;
+}
+
+#course-search-box2 label {
+  color: white;
+  max-width: 325px;
+}
+
+#course-search-box2 .form-group {
+  background: white !important;
+  padding: .3rem !important;
+  margin-bottom: 1rem !important;
+}
+
+#course-search-box select.form-control,
+#course-search-box2 select.form-control {
+  color: black !important;
+  z-index: 100;
+}
+
+.search2 {
+  display: block;
+  margin-top: 4rem;
+}
+
+.search2 input {
+  border-radius: 3px !important;
+}
+
+#course-description-modal,
+#attributes-modal {
+  max-height: calc(100vh - 50px);
+  overflow-y: auto;
+}
+
+#csb-department2,
+#csb-instructor2,
+#csb-title2,
+#csb-credits2,
+#csb-course-name2,
+#csb-attributes2 {
+  background: transparent !important;
+  color: white !important;
+  height: 2.5rem !important;
+  width: 100% !important;
+  font-size: 1rem !important;
+  border: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  padding: 0 0.65em !important;
+  cursor: pointer;
+}
+
+#csb-course-name2,
+#csb-instructor2,
+#csb-title2,
+#csb-credits2,
+#csb-attributes2 {
+  display: block;
+}
+
+#course-search-box2 label {
+  display: inline;
+}
+
+p span.class-detail-paragraph {
+  font-size: .9rem !important;
+}
+
+/* Kingster theme buttons */
 .kingster-footer-back-to-top-button {
   height: 60px;
   width: 60px;
@@ -928,9 +892,9 @@ input:focus, textarea:focus, select:focus {
 }
 
 #code-search-form #code-search {
-	font-size: 22px;
-	padding: 1rem 1rem 1rem 6rem;
-	background: aliceblue;
+  font-size: 22px;
+  padding: 1rem 1rem 1rem 6rem;
+  background: aliceblue;
   display: block !important;
   width: 100%;
   border: none;
@@ -938,30 +902,96 @@ input:focus, textarea:focus, select:focus {
 }
 
 #code-search-magnifying-glass {
-	display: inline-block;
-	width: 50px;
-	float: left;
-	padding: 1rem 1rem 1rem 1rem;
+  display: inline-block;
+  width: 50px;
+  float: left;
+  padding: 1rem 1rem 1rem 1rem;
   margin-bottom: -3.9rem;
   margin-top: 0;
 }
 
 #code-search-form #code-search:focus {
-	background: aliceblue !important;
+  background: aliceblue !important;
 }
 
 #code-search::-webkit-input-placeholder {
   color: slategray;
 }
+
 #code-search::-moz-placeholder {
   color: slategray;
 }
+
 #code-search:-ms-input-placeholder {
   color: slategray;
 }
+
 #code-search:-moz-placeholder {
   color: slategray;
 }
+
 #code-search::placeholder {
-	color: slategray;
+  color: slategray;
+}
+
+.all-stuff {
+  width: 50%;
+  margin-bottom: 25px;
+  float: left;
+}
+
+@media screen and (max-width: 768px) {
+  .all-stuff {
+    width: 98%;
+  }
+}
+
+.all-stuff a {
+  color: #00843d !important;
+}
+
+#course-search-box2 {
+  width: 45%;
+  float: right;
+  margin-left: 4%;
+}
+
+@media screen and (max-width: 768px) {
+  #course-search-box2 {
+    width: 98%;
+  }
+}
+
+
+/* Course Cards */
+.course-card {
+  min-height: 475px;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 500px) {
+  .course-card {
+    width: 98%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .course-card {
+    width: 46%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .course-card {
+    width: 31%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .course-card {
+    width: 31%;
+  }
 }

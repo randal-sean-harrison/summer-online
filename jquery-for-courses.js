@@ -31,7 +31,6 @@
    // Filter the page based on the typeahead search input ---------------------------------
    jQuery("#search-text").on("keyup", function() {
 
-
      jQuery("#csb-instructor").val("all");
      jQuery("#csb-course-name").val("all");
      jQuery("#csb-title").val("all");
@@ -145,6 +144,11 @@
    //Reset all the search Filters (NEW - MOBILE)
    // Reset all the search Filters
    jQuery("#reset-the-filters2").on("click", function() {
+
+    // Reset the search field
+     jQuery("#search-text2").val("");
+
+     // Write all to all dropdowns
      jQuery("#csb-instructor2").val("all");
      jQuery("#csb-course-name2").val("all");
      jQuery("#csb-title2").val("all");
@@ -155,6 +159,7 @@
      jQuery(".course-card").fadeIn();
 
      countClasses();
+
 
    });
 
@@ -684,70 +689,70 @@
 
    // Parse the string return from html for cd-time ------------------------------------------------------
 
-   jQuery('.cd-time').each(function(i, e) {
-     jQuery(this).html(jQuery(this).text());
-   });
-
-   jQuery(".cd-time").text(function() {
-     return jQuery(this).text().replace(/DEPARTMENTAL ASSIGNS/g, "");
-   });
-
-   jQuery(".cd-time").text(function() {
-     return jQuery(this).text().replace(/ONLINE COURSE/g, "");
-   });
-
-   jQuery(".cd-time").text(function() {
-     return jQuery(this).text().replace(/<br>/g, "");
-   });
-
-   jQuery(".cd-time").text(function() {
-     return jQuery(this).text().replace(/ - /g, "");
-   });
-
-   jQuery(".cd-time").text(function() {
-     return jQuery(this).text().replace(" AM-", "am - ");
-   });
-
-   jQuery(".cd-time").text(function() {
-     return jQuery(this).text().replace(" PM-", "pm - ");
-   });
-
-   jQuery(".cd-time").text(function() {
-     return jQuery(this).text().replace(/ PM/gi, "pm ");
-   });
-
-   jQuery(".cd-time").each(function(i, e) {
-     var workingString = jQuery.trim(jQuery(this).text());
-     var startDate = workingString.substr(0, 5);
-     var endDate = workingString.substr(workingString.length - 5);
-     // workingString.slice(0, 11);
-     // workingString.slice(0, -11);
-
-     workingString = jQuery.trim(workingString.substring(14, workingString.length - 14));
-
-     jQuery(this).text(workingString + ", " + startDate + "-" + endDate);
-   });
+   // jQuery('.cd-time').each(function(i, e) {
+   //   jQuery(this).html(jQuery(this).text());
+   // });
+   //
+   // jQuery(".cd-time").text(function() {
+   //   return jQuery(this).text().replace(/DEPARTMENTAL ASSIGNS/g, "");
+   // });
+   //
+   // jQuery(".cd-time").text(function() {
+   //   return jQuery(this).text().replace(/ONLINE COURSE/g, "");
+   // });
+   //
+   // jQuery(".cd-time").text(function() {
+   //   return jQuery(this).text().replace(/<br>/g, "");
+   // });
+   //
+   // jQuery(".cd-time").text(function() {
+   //   return jQuery(this).text().replace(/ - /g, "");
+   // });
+   //
+   // jQuery(".cd-time").text(function() {
+   //   return jQuery(this).text().replace(" AM-", "am - ");
+   // });
+   //
+   // jQuery(".cd-time").text(function() {
+   //   return jQuery(this).text().replace(" PM-", "pm - ");
+   // });
+   //
+   // jQuery(".cd-time").text(function() {
+   //   return jQuery(this).text().replace(/ PM/gi, "pm ");
+   // });
+   //
+   // jQuery(".cd-time").each(function(i, e) {
+   //   var workingString = jQuery.trim(jQuery(this).text());
+   //   var startDate = workingString.substr(0, 5);
+   //   var endDate = workingString.substr(workingString.length - 5);
+   //   // workingString.slice(0, 11);
+   //   // workingString.slice(0, -11);
+   //
+   //   workingString = jQuery.trim(workingString.substring(14, workingString.length - 14));
+   //
+   //   jQuery(this).text(workingString + ", " + startDate + "-" + endDate);
+   // });
 
    // Replace cd-times with null values
-   jQuery(".cd-time").text(function() {
-     return jQuery(this).text().replace(", -", "TBD");
-   });
+   // jQuery(".cd-time").text(function() {
+   //   return jQuery(this).text().replace(", -", "TBD");
+   // });
+   //
+   // // if exactly 24 characters, remove first 13 and add TBD
+   // jQuery(".cd-time").text(function() {
+   //   if (jQuery(this).text().length == 23) {
+   //     return "TBD, " + jQuery(this).text().slice("13");
+   //   }
+   // });
+   //
+   // // if exactly 13 characters, remove first 13 and add TBD
+   // jQuery(".cd-time").text(function() {
+   //   if (jQuery(this).text().length == 13) {
+   //     return "TBD, " + jQuery(this).text().slice("2");
+   //   }
+   // });
 
-   // if exactly 24 characters, remove first 13 and add TBD
-   jQuery(".cd-time").text(function() {
-     if (jQuery(this).text().length == 23) {
-       return "TBD, " + jQuery(this).text().slice("13");
-     }
-   });
-
-   // if exactly 13 characters, remove first 13 and add TBD
-   jQuery(".cd-time").text(function() {
-     if (jQuery(this).text().length == 13) {
-       return "TBD, " + jQuery(this).text().slice("2");
-     }
-   });
-
-   // Remove the Ps and Bs in the ription pop ups
+   // Remove the Ps and Bs in the caption pop ups
    jQuery(".class-detail-paragraph").text(function() {
      return jQuery(this).text().replace(/<P>/gi, "");
    });
@@ -770,7 +775,7 @@
 
    // Put the course description in the modal
    jQuery(".show-description").on("click", function() {
-     var textToMove = jQuery(this).parent().next("div").html();
+     var textToMove = jQuery(this).next("div").html();
 
      // Move the text and the title to the modal
      jQuery(".course-info").html(textToMove);
@@ -849,9 +854,9 @@
      var numCards = jQuery('.course-card:visible').length;
 
      if (numCards !== 1) {
-       jQuery("#number-of-classes").html(numCards + " CLASSES");
+       jQuery("#number-of-classes").html(numCards + " COURSES");
      } else {
-       jQuery("#number-of-classes").html(numCards + " CLASS");
+       jQuery("#number-of-classes").html(numCards + " COURSE");
      }
    }
 

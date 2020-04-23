@@ -1,0 +1,68 @@
+<div style="height: 30px"></div>
+<hr>
+<h5 style="text-center" id="number-of-classes"></h5>
+<hr>
+[jsoncontentimporter url=https://summeronline-dcnd.s3.amazonaws.com/prod/course_catalog.json]
+<div class="course-card">
+  <div class="course-header">
+    <div class="course-title">
+      <h4 id="modal-class-header" class="white"><span class="department-code">{subject_code}</span> {course_number}</h4>
+      <p class="lead white modal-title">{title}</p>
+
+      <div class="course-instructor">
+        <h5>{all_instructors}</h5>
+        <p style="text-align: right; padding-right: 1rem; margin-top: -2rem; cursor:pointer" class="show-description"><i class="fa fa-fw fa-info-circle white fa-2x"></i></p>
+        <div class="description-text">
+          <h5>{department_code} {course_number} | {title}</h5>
+          <h6>{all_instructors}</h6>
+          <span class="class-detail-paragraph" style="line-height: 1 !important;">{course_description}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="course-details">
+    <ul class="course-details-ul">
+      <li class="cd-department">{subject_desc}</li>
+      <li class="cd-credits">{credit_hr_low} credits &nbsp;&nbsp;&nbsp;<span class="cd-crn">CRN {crn}</span></li>
+      <li class="cd-enrollment">{crn_enrollment} of {crn_max_enrollment} enrolled</li>
+      <li class="cd-time">{meeting_times_nohtml}</li>
+      <li class="cd-attribute-codes">{attribute_codes}, {uni_reqs}</li>
+    </ul>
+  </div>
+  <div class="course-description">
+    <p class="text-center"><button class="card-button open-registration-window link-green" style="margin-right: .75rem;"><i id="registration-button" class="fa fa-graduation-cap" aria-hidden="true"></i> Register</button><button style="display:none" class="card-button link-green"><i id="what-carat" class="fa fa-info-circle" aria-hidden="true"></i> Details</button></p>
+
+  </div>
+</div>
+[/jsoncontentimporter]
+<div class="backdrop"></div>
+<!--Modal Card for descriptions -->
+<div id="course-description-modal">
+  <div class="course-info"></div>
+</div>
+<!-- Modal card for attributes -->
+<div id="attributes-modal">
+  <div class="attributes-head">
+    <h4>Course Attribute Codes</h4>
+  </div>
+  <div class="attributes-info">
+    <form id="code-search-form">
+      <label for="glossary-search"></label>
+        <p id="code-search-magnifying-glass"><i class="fa fa-search fa-2x slategray"></i></p>
+        <input name="code-search" type="text" autofocus="autofocus" id="code-search" autocomplete="off" placeholder="Search">
+    </form>
+    <p id="clear-attribute-search" class="link-green text-right">Clear Search</p>
+    <table id="attributes-table">
+      [jsoncontentimporter url=https://summeronline-dcnd.s3.amazonaws.com/prod/attributes.json]
+      <tr class="attribute-tr">
+        <td>
+          {attribute_code}
+        </td>
+        <td>
+          {attribute_description}
+        </td>
+      </tr>
+      [/jsoncontentimporter]
+    </table>
+  </div>
+</div>
