@@ -75,20 +75,12 @@
 
    });
 
-   // Clear search button
+   // Clear the search button -----------------------------------------
    jQuery("#clear-search").on("click", function() {
      // clear the search text input
-     jQuery("#search-text").val("");
      jQuery("#search-text2").val("");
 
      // Reset all the dropdowns
-     jQuery("#csb-instructor").val("all");
-     jQuery("#csb-course-name").val("all");
-     jQuery("#csb-title").val("all");
-     jQuery("#csb-credits").val("all");
-     jQuery("#csb-attributes").val("all");
-
-     // Rest the dropdowns for mobile
      jQuery("#csb-instructor2").val("all");
      jQuery("#csb-course-name2").val("all");
      jQuery("#csb-title2").val("all");
@@ -98,54 +90,16 @@
      // show all the cards
      jQuery(".course-card").fadeIn();
 
+     // Show the number of courses displayed
      countClasses();
 
    });
 
-   //(NEW-MOBILE) Clear search button
-   // jQuery("#clear-search").on("click", function() {
-   //   // clear the search text input
-   //   jQuery("#search-text").val("").focus();
-   //
-   //   // Reset all the dropdowns
-   //   jQuery("#csb-instructor2").val("all");
-   //   jQuery("#csb-course-name2").val("all");
-   //   jQuery("#csb-title2").val("all");
-   //   jQuery("#csb-credits2").val("all");
-   //   jQuery("#csb-attributes2").val("all");
-   //
-   //   // show all the cards
-   //   jQuery(".course-card").fadeIn();
-   //
-   //   countClasses();
-   // });
 
-   // Toggle the descriptions
-   // jQuery(".toggle-description").on("click", function() {
-   //   jQuery(this).next("div").slideToggle("fast");
-   //   return false;
-   // });
-
-   // Reset all the search Filters
-   jQuery("#reset-the-filters").on("click", function() {
-     jQuery("#csb-instructor").val("all");
-     jQuery("#csb-course-name").val("all");
-     jQuery("#csb-title").val("all");
-     jQuery("#csb-credits").val("all");
-     jQuery("#csb-attributes").val("all");
-
-     // show all the cards
-     jQuery(".course-card").fadeIn();
-
-     countClasses();
-
-   });
-
-   //Reset all the search Filters (NEW - MOBILE)
-   // Reset all the search Filters
+   // Reset all the search Filters ---------------------------------
    jQuery("#reset-the-filters2").on("click", function() {
 
-    // Reset the search field
+     // Reset the search field
      jQuery("#search-text2").val("");
 
      // Write all to all dropdowns
@@ -158,62 +112,15 @@
      // show all the cards
      jQuery(".course-card").fadeIn();
 
+     // Show the number of courses displayed
      countClasses();
 
 
    });
 
-   // Show and hide all Descriptions
-   // jQuery("#show-hide-container").on("click", function() {
-   //   //
-   //
-   //   if (jQuery("#show-hide-container i").hasClass("fa-eye")) {
-   //
-   //     // change the eye-con
-   //     jQuery("#show-hide-container i").removeClass("fa-eye");
-   //     jQuery("#show-hide-container i").addClass("fa-eye-slash");
-   //
-   //     // change the Hide to Show
-   //     jQuery("#show-hide-label").text("Hide");
-   //
-   //     // hide all the panels
-   //     jQuery(".toggle-description").next("div").slideDown("fast");
-   //
-   //   } else {
-   //
-   //     jQuery("#show-hide-container i").removeClass("fa-eye-slash");
-   //     jQuery("#show-hide-container i").addClass("fa-eye");
-   //
-   //     // hide all the panels
-   //     jQuery(".toggle-description").next("div").slideUp("fast");
-   //
-   //     // change the show to Hide
-   //     jQuery("#show-hide-label").text("Show");
-   //   }
-   //
-   // });
-
-   // --------------------------------------------------------
-
    // Get an array of all instructors
-   var allInstructors = [];
-   jQuery('.course-instructor h5').each(function(i, e) {
-     if (jQuery(e).text() != "") {
-       allInstructors.push(jQuery(e).text());
-     }
-   });
-   // sort the array
-   allInstructors.sort();
-   // Dedupe the array
-   allInstructors = jQuery.unique(allInstructors);
-   // Add the instructors to the instructor ul element
-   for (i = 0; i < allInstructors.length; i++) {
-     jQuery("#csb-instructor").append("<option value='" + allInstructors[i] + "'>" + allInstructors[i] + "</option>");
-   }
-
-   //(NEW-MOBILE) Get an array of all instructors
    var allInstructors2 = [];
-   jQuery('.course-instructor h5').each(function(i, e) {
+   jQuery('.course-instructor > h5').each(function(i, e) {
      if (jQuery(e).text() != "") {
        allInstructors2.push(jQuery(e).text());
      }
@@ -245,7 +152,7 @@
 
    //(NEW-MOBILE) Get an array of all credit hours
    var allCreditHours = [];
-   jQuery('.cd-credits').each(function(i, e) {
+   jQuery('.cd-credits span#sub-credits').each(function(i, e) {
      allCreditHours.push(jQuery(e).text());
    });
    // sort the array
@@ -272,58 +179,13 @@
    allCourseName = jQuery.unique(allCourseName);
    // Add the instructors to the instructor ul element
    for (i = 0; i < allCourseName.length; i++) {
-     jQuery("#csb-course-name").append("<option value='" + allCourseName[i] + "'>" + allCourseName[i] + "</option>");
-   }
-
-   //(NEW-MOBILE) Get an array of all disciplines
-   var allCourseName = [];
-   jQuery('.cd-department').each(function(i, e) {
-     if (jQuery(e).text() != "") {
-       allCourseName.push(jQuery(e).text());
-     }
-   });
-   // sort the array
-   allCourseName.sort();
-   // Dedupe the array
-   allCourseName = jQuery.unique(allCourseName);
-   // Add the instructors to the instructor ul element
-   for (i = 0; i < allCourseName.length; i++) {
      jQuery("#csb-course-name2").append("<option value='" + allCourseName[i] + "'>" + allCourseName[i] + "</option>");
    }
 
-   // --------------------------------------------------------
 
-   // Put TBD for courses that have no instructor assigned
-   jQuery('.course-instructor h5').each(function(i, e) {
-     if (jQuery(e).text() == "") {
-       jQuery(e).text("TBD");
-     }
-   });
-
-
-   // Get an array of course names ----------------------------------
+   // Get an array of course names ---------------------------------
    var allCourses = [];
-   jQuery('.course-title p').each(function(i, e) {
-     if (jQuery(e).text() != "") {
-       allCourses.push(jQuery(e).text());
-     }
-   });
-
-   // sort the array
-   allCourses.sort();
-
-   // Dedupe the array
-   allCourses = jQuery.unique(allCourses);
-
-   // Add the instructors to the instructor ul element
-   for (j = 0; j < allCourses.length; j++) {
-     jQuery("#csb-title").append("<option value='" + allCourses[j] + "'>" + allCourses[j] + "</option>");
-
-   }
-
-   //(NEW-MOBILE) Get an array of course names
-   var allCourses = [];
-   jQuery('.course-title p').each(function(i, e) {
+   jQuery('.department-code').each(function(i, e) {
      if (jQuery(e).text() != "") {
        allCourses.push(jQuery(e).text());
      }
@@ -371,24 +233,7 @@
      jQuery("#csb-attributes2").append("<option value='" + allCodes[k] + "'>" + allCodes[k] + "</option>");
    }
 
-   //(NEW-MOBILE) Get an array of course names
-   // var allCodes = [];
-   // jQuery('.cd-attribute-codes').each(function(i, e) {
-   //   if (jQuery(e).text() != "") {
-   //     allCodes.push(jQuery(e).text());
-   //   }
-   // });
-   //
-   // // sort the array
-   // allCodes.sort();
-   //
-   // // Dedupe the array
-   // allCodes = jQuery.unique(allCodes);
-   //
-   // // Add the instructors to the instructor ul element
-   // for (j = 0; j < allCodes.length; j++) {
-   //   jQuery("#csb-attributes2").append("<option value='" + allCodes[j] + "'>" + allCodes[j] + "</option>");
-   // }
+
 
    // Filter on attribute codes -----------------------------------------
    jQuery("#csb-attributes").on("change", function() {
@@ -861,23 +706,30 @@
    }
 
 
+   // Put TBD for courses that have no instructor assigned -------------------------
+   jQuery('.course-instructor h5').each(function(i, e) {
+     if (jQuery(e).text() == "") {
+       jQuery(e).text("TBD");
+     }
+   });
+
    // Attributes search functionality ------------------------------------------------
 
    // set focus on clear search clicked
-   jQuery("#clear-attribute-search").on("click", function(){
-    // Clear the input and put focus inside the search field again
-    jQuery("#code-search").val("").focus();
-    // Show all the cards
-    jQuery(".attribute-tr").fadeIn();
-  });
+   jQuery("#clear-attribute-search").on("click", function() {
+     // Clear the input and put focus inside the search field again
+     jQuery("#code-search").val("").focus();
+     // Show all the cards
+     jQuery(".attribute-tr").fadeIn();
+   });
 
-  // Filter functionality
-  jQuery("#code-search").on("keyup", function() {
-      var value = jQuery(this).val().toLowerCase();
-      jQuery(".attribute-tr").filter(function() {
-        jQuery(this).toggle(jQuery(this).text().toLowerCase().indexOf(value) > -1)
-      });
-    });
+   // Filter functionality
+   jQuery("#code-search").on("keyup", function() {
+     var value = jQuery(this).val().toLowerCase();
+     jQuery(".attribute-tr").filter(function() {
+       jQuery(this).toggle(jQuery(this).text().toLowerCase().indexOf(value) > -1)
+     });
+   });
 
 
 
