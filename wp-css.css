@@ -965,7 +965,7 @@ p span.class-detail-paragraph {
 
 /* Course Cards */
 .course-card {
-  min-height: 475px;
+  min-height: 520px;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -994,4 +994,10 @@ p span.class-detail-paragraph {
   .course-card {
     width: 31%;
   }
+}
+
+.course-list-image {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	width: 100% !important;
 }
