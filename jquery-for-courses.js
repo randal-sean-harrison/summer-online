@@ -1,5 +1,16 @@
  jQuery(document).ready(function() {
 
+   var myVar;
+
+     function showPage() {
+       myVar = setTimeout(showPage, 3500);
+     }
+
+     showPage();
+
+     function showPage() {
+
+
    // Hide the description text at start
    jQuery(".description-text").hide();
 
@@ -8,16 +19,27 @@
    // jQuery(".course-card").remove(":not(:contains('PCSE'))");
 
    // Remove these specific department level courses ---------------------------------------
+   jQuery(".course-card").remove(":contains('CLGR 60001')");
+   jQuery(".course-card").remove(":contains('ANTH 10203')");
+   jQuery(".course-card").remove(":contains('ANTH 20201')");
+   jQuery(".course-card").remove(":contains('ANTH 20203')");
    jQuery(".course-card").remove(":contains('DS 64301')");
    jQuery(".course-card").remove(":contains('DS 64305')");
    jQuery(".course-card").remove(":contains('DS 64620')");
-   // jQuery(".course-card").remove(":contains('ROIT 64050')");
+   jQuery(".course-card").remove(":contains('ROIT 64050')");
+   jQuery(".course-card").remove(":contains('ROIT 24231')");
+   jQuery(".course-card").remove(":contains('ROIT 14101')");
+   jQuery(".course-card").remove(":contains('ROIT 14102')");
    jQuery(".course-card").remove(":contains('EDU 70200')");
    jQuery(".course-card").remove(":contains('EDU 70202')");
-   // jQuery(".course-card").remove(":contains('ROIT 14101')");
-   // jQuery(".course-card").remove(":contains('ROIT 14102')");
+   jQuery(".course-card").remove(":contains('ROIT 14101')");
+   jQuery(".course-card").remove(":contains('ROIT 14102')");
    jQuery(".course-card").remove(":contains('ENGL 64050')");
+   jQuery(".course-card").remove(":contains('EDU 70100')");
+   jQuery(".course-card").remove(":contains('EDU 70110')");
    jQuery(".course-card").remove(":contains('EDU 70201')");
+   jQuery(".course-card").remove(":contains('THEO 64216')");
+   jQuery(".course-card").remove(":contains('THEO 64222')");
 
    // Remove if course is inactive
    jQuery(".course-card").remove(":contains('Sequence 99')");
@@ -611,10 +633,10 @@
      window.open("https://summersession.nd.edu/apply/", "_blank");
    });
 
-   // Parse the string return from html for descriptions
-   // jQuery('.description-text').each(function(i, e) {
-   //   jQuery(this).html(jQuery(this).text());
-   // });
+   // Parse the string return from html for descriptions  -- reactivated
+   jQuery('.description-text').each(function(i, e) {
+     jQuery(this).html(jQuery(this).text());
+   });
 
    jQuery(".fa-angle-up").removeClass("fa-angle-up").addClass("fa-caret-up").addClass("fa-2x");
 
@@ -731,8 +753,10 @@
      });
    });
 
+   // document.getElementById("loader").style.display = "none";
+   // document.getElementById("main-content").style.display = "block";
 
-
+  }
 
  });
  // document.ready
