@@ -633,10 +633,10 @@
      window.open("https://summersession.nd.edu/apply/", "_blank");
    });
 
-   // Parse the string return from html for descriptions  -- reactivated
-   jQuery('.description-text').each(function(i, e) {
-     jQuery(this).html(jQuery(this).text());
-   });
+   // Parse the string return from html for descriptions  -- deactivated -- this breaks the description
+   // jQuery('.description-text').each(function(i, e) {
+   //   jQuery(this).html(jQuery(this).text());
+   // });
 
    jQuery(".fa-angle-up").removeClass("fa-angle-up").addClass("fa-caret-up").addClass("fa-2x");
 
