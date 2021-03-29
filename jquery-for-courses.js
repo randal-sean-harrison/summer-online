@@ -26,18 +26,20 @@
    jQuery(".course-card").remove(":contains('DS 64301')");
    jQuery(".course-card").remove(":contains('DS 64305')");
    jQuery(".course-card").remove(":contains('DS 64620')");
-   jQuery(".course-card").remove(":contains('ROIT 64050')");
-   jQuery(".course-card").remove(":contains('ROIT 24231')");
-   jQuery(".course-card").remove(":contains('ROIT 14101')");
-   jQuery(".course-card").remove(":contains('ROIT 14102')");
    jQuery(".course-card").remove(":contains('EDU 70200')");
    jQuery(".course-card").remove(":contains('EDU 70202')");
-   jQuery(".course-card").remove(":contains('ROIT 14101')");
-   jQuery(".course-card").remove(":contains('ROIT 14102')");
+   // jQuery(".course-card").remove(":contains('ROIT 64050')");
+   // jQuery(".course-card").remove(":contains('ROIT 24231')");
+   // jQuery(".course-card").remove(":contains('ROIT 14101')");
+   // jQuery(".course-card").remove(":contains('ROIT 14102')");
+   // jQuery(".course-card").remove(":contains('ROIT 14101')");
+   // jQuery(".course-card").remove(":contains('ROIT 14102')");
    jQuery(".course-card").remove(":contains('ENGL 64050')");
+   jQuery(".course-card").remove(":contains('ENGL 94513')");
    jQuery(".course-card").remove(":contains('EDU 70100')");
    jQuery(".course-card").remove(":contains('EDU 70110')");
    jQuery(".course-card").remove(":contains('EDU 70201')");
+   jQuery(".course-card").remove(":contains('IRST 64099')");
    jQuery(".course-card").remove(":contains('THEO 64216')");
    jQuery(".course-card").remove(":contains('THEO 64222')");
 
