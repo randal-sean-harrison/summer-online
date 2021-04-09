@@ -42,6 +42,8 @@
    jQuery(".course-card").remove(":contains('IRST 64099')");
    jQuery(".course-card").remove(":contains('THEO 64216')");
    jQuery(".course-card").remove(":contains('THEO 64222')");
+   jQuery(".course-card").remove(":contains('IRST 64099')");
+   jQuery(".course-card").remove(":contains('ENGL 94513')");
 
    // Remove if course is inactive
    jQuery(".course-card").remove(":contains('Sequence 99')");
