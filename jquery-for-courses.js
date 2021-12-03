@@ -15,42 +15,29 @@
    jQuery(".description-text").hide();
 
    // Remove everything that does not have the ZODO or PCSE attribute
-   jQuery(".course-card").remove(":not(:contains('ZODO'))");
+   // jQuery(".course-card").remove(":not(:contains('ZODO'))");
    // jQuery(".course-card").remove(":not(:contains('PCSE'))");
 
    // Remove these specific department level courses ---------------------------------------
-   jQuery(".course-card").remove(":contains('CLGR 60001')");
-   jQuery(".course-card").remove(":contains('ANTH 10203')");
-   jQuery(".course-card").remove(":contains('ANTH 20201')");
-   jQuery(".course-card").remove(":contains('ANTH 20203')");
-   jQuery(".course-card").remove(":contains('DS 64301')");
-   jQuery(".course-card").remove(":contains('DS 64305')");
-   jQuery(".course-card").remove(":contains('DS 64620')");
-   jQuery(".course-card").remove(":contains('EDU 70200')");
-   jQuery(".course-card").remove(":contains('EDU 70202')");
-   // jQuery(".course-card").remove(":contains('ROIT 64050')");
-   // jQuery(".course-card").remove(":contains('ROIT 24231')");
-   // jQuery(".course-card").remove(":contains('ROIT 14101')");
-   // jQuery(".course-card").remove(":contains('ROIT 14102')");
-   // jQuery(".course-card").remove(":contains('ROIT 14101')");
-   // jQuery(".course-card").remove(":contains('ROIT 14102')");
-   jQuery(".course-card").remove(":contains('ENGL 64050')");
-   jQuery(".course-card").remove(":contains('ENGL 94513')");
-   jQuery(".course-card").remove(":contains('EDU 70100')");
-   jQuery(".course-card").remove(":contains('EDU 70110')");
-   jQuery(".course-card").remove(":contains('EDU 70201')");
-   jQuery(".course-card").remove(":contains('IRST 64099')");
-   jQuery(".course-card").remove(":contains('THEO 64216')");
-   jQuery(".course-card").remove(":contains('THEO 64222')");
-   jQuery(".course-card").remove(":contains('IRST 64099')");
-   jQuery(".course-card").remove(":contains('ENGL 94513')");
+   jQuery(".course-card").remove(":contains('MSMG')");
+   jQuery(".course-card").remove(":contains('EDU')");
+   jQuery(".course-card").remove(":contains('REG')");
+   jQuery(".course-card").remove(":contains('PCSE')");
+   jQuery(".course-card").remove(":contains('ACCT 60111')");
+   jQuery(".course-card").remove(":contains('IRST ')");
+   jQuery(".course-card").remove(":contains('Irish Seminar')");
+   jQuery(".course-card").remove(":contains('ACCT 60411')");
+   jQuery(".course-card").remove(":contains('ACCT 60112')");
+   jQuery(".course-card").remove(":contains('ACCT 60232')");
+   jQuery(".course-card").remove(":contains('EG 00100')");
+   jQuery(".course-card").remove(":contains('GRED 60802')");
 
    // Remove if course is inactive
-   jQuery(".course-card").remove(":contains('Sequence 99')");
+      // jQuery(".course-card").remove(":contains('Sequence 99')");
 
    // Remove list items containing "education" and "italian" from dropdowns
-   jQuery("option").remove(":contains('Education')");
-   jQuery("option").remove(":contains('Italian')");
+       // jQuery("option").remove(":contains('Education')");
+       // jQuery("option").remove(":contains('Italian')");
 
    countClasses();
 
@@ -176,9 +163,21 @@
      jQuery("#csb-credits").append("<option value='" + allCreditHours[i] + "'>" + allCreditHours[i] + "</option>");
    }
 
+   // Replace min credit hours with max if availble
+   jQuery('.cd-credits span.sub-credits').each(function(i, e) {
+     // If high credit hours has a value, get it
+     if (jQuery(this).next().text() !== "") {
+      var correctCreditHours = jQuery(this).next().text();
+      // write it to the min span
+      jQuery(this).text(correctCreditHours);
+      // Erase the max span
+      jQuery(this).next().text("");
+     }
+   });
+
    //(NEW-MOBILE) Get an array of all credit hours
    var allCreditHours = [];
-   jQuery('.cd-credits span#sub-credits').each(function(i, e) {
+   jQuery('.cd-credits span.sub-credits').each(function(i, e) {
      allCreditHours.push(jQuery(e).text());
    });
    // sort the array
