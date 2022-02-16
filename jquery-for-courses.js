@@ -24,6 +24,7 @@
    jQuery(".course-card").remove(":contains('REG')");
    jQuery(".course-card").remove(":contains('PCSE')");
    jQuery(".course-card").remove(":contains('ACCT 60111')");
+   jQuery(".course-card").remove(":contains('THEO 60181')");
    jQuery(".course-card").remove(":contains('IRST ')");
    jQuery(".course-card").remove(":contains('Irish Seminar')");
    jQuery(".course-card").remove(":contains('ACCT 60411')");
@@ -31,6 +32,12 @@
    jQuery(".course-card").remove(":contains('ACCT 60232')");
    jQuery(".course-card").remove(":contains('EG 00100')");
    jQuery(".course-card").remove(":contains('GRED 60802')");
+   jQuery(".course-card").remove(":contains('MSA 60112')");
+   jQuery(".course-card").remove(":contains('MSA 60122')");
+   jQuery(".course-card").remove(":contains('MSA 60123')");
+   jQuery(".course-card").remove(":contains('MSA 60141')");
+   jQuery(".course-card").remove(":contains('MSA 60151')");
+
 
    // Remove if course is inactive
       // jQuery(".course-card").remove(":contains('Sequence 99')");
