@@ -37,6 +37,9 @@
    jQuery(".course-card").remove(":contains('MSA 60123')");
    jQuery(".course-card").remove(":contains('MSA 60141')");
    jQuery(".course-card").remove(":contains('MSA 60151')");
+   jQuery(".course-card").remove(":contains('DS 60301')");
+   jQuery(".course-card").remove(":contains('DS 60305')");
+   jQuery(".course-card").remove(":contains('DS 60620')");
 
 
    // Remove if course is inactive
