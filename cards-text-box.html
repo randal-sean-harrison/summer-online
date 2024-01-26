@@ -11,7 +11,8 @@
 
       <div class="course-instructor">
         <h5>{all_instructors}</h5>
-        <p style="text-align: right; padding-right: 1rem; margin-top: -2rem; cursor:pointer" class="show-description"><i class="fa fa-fw fa-info-circle white fa-2x"></i></p>
+        <p style="text-align: right; padding-right: 1rem; margin-top: -2rem; cursor:pointer" class="show-description"><i
+            class="fa fa-fw fa-info-circle white fa-2x"></i></p>
         <div class="description-text">
           <h5>{subject_code} {course_number} | {title}</h5>
           <h6>{all_instructors}</h6>
@@ -23,14 +24,18 @@
   <div class="course-details">
     <ul class="course-details-ul">
       <li class="cd-department">{subject_desc}</li>
-      <li class="cd-credits"><span class="sub-credits">{credit_hr_low}</span><span>{credit_hr_high}</span> credits &nbsp;&nbsp;&nbsp;<span class="cd-crn">CRN {crn}</span></li>
+      <li class="cd-credits"><span class="sub-credits">{credit_hr_low}</span><span>{credit_hr_high}</span> credits
+        &nbsp;&nbsp;&nbsp;<span class="cd-crn">CRN {crn}</span></li>
       <li class="cd-enrollment">{crn_enrollment} of {crn_max_enrollment} enrolled</li>
       <li class="cd-time">{meeting_times_nohtml}</li>
       <li class="cd-attribute-codes">{attribute_codes}, {uni_reqs}</li>
     </ul>
   </div>
   <div class="course-description">
-    <p class="text-center"><button class="card-button open-registration-window link-green" style="margin-right: .75rem;"><i id="registration-button" class="fa fa-graduation-cap" aria-hidden="true"></i> Register</button><button style="display:none" class="card-button link-green"><i id="what-carat" class="fa fa-info-circle" aria-hidden="true"></i> Details</button></p>
+    <p class="text-center"><button class="card-button open-registration-window link-green"
+        style="margin-right: .75rem;"><i id="registration-button" class="fa fa-graduation-cap" aria-hidden="true"></i>
+        Register</button><button style="display:none" class="card-button link-green"><i id="what-carat"
+          class="fa fa-info-circle" aria-hidden="true"></i> Details</button></p>
 
   </div>
 </div>
@@ -48,8 +53,9 @@
   <div class="attributes-info">
     <form id="code-search-form">
       <label for="glossary-search"></label>
-        <p id="code-search-magnifying-glass"><i class="fa fa-search fa-2x slategray"></i></p>
-        <input name="code-search" type="text" autofocus="autofocus" id="code-search" autocomplete="off" placeholder="Search">
+      <p id="code-search-magnifying-glass"><i class="fa fa-search fa-2x slategray"></i></p>
+      <input name="code-search" type="text" autofocus="autofocus" id="code-search" autocomplete="off"
+        placeholder="Search">
     </form>
     <p id="clear-attribute-search" class="link-green text-right">Clear Search</p>
     <table id="attributes-table">
