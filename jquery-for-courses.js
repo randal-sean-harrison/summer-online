@@ -20,10 +20,12 @@ jQuery(document).ready(function () {
 
     // Remove these specific department level courses ---------------------------------------
     //  jQuery(".course-card").remove(":contains('MSMG')");
-    //  jQuery(".course-card").remove(":contains('EDU')");
+    jQuery(".course-card").remove(":contains('EDU')");
     //  jQuery(".course-card").remove(":contains('REG')");
     //  jQuery(".course-card").remove(":contains('PCSE')");
-    //  jQuery(".course-card").remove(":contains('ACCT 60111')");
+    jQuery(".course-card").remove(":contains('ACCT 30120')");
+    jQuery(".course-card").remove(":contains('ACCT 30280')");
+    jQuery(".course-card").remove(":contains('ACCT 40510')");
     //  jQuery(".course-card").remove(":contains('THEO 60181')");
     //  jQuery(".course-card").remove(":contains('IRST ')");
     //  jQuery(".course-card").remove(":contains('Irish Seminar')");
@@ -32,14 +34,17 @@ jQuery(document).ready(function () {
     //  jQuery(".course-card").remove(":contains('ACCT 60232')");
     //  jQuery(".course-card").remove(":contains('EG 00100')");
     //  jQuery(".course-card").remove(":contains('GRED 60802')");
-    //  jQuery(".course-card").remove(":contains('MSA 60112')");
-    //  jQuery(".course-card").remove(":contains('MSA 60122')");
-    //  jQuery(".course-card").remove(":contains('MSA 60123')");
-    //  jQuery(".course-card").remove(":contains('MSA 60141')");
-    //  jQuery(".course-card").remove(":contains('MSA 60151')");
-    //  jQuery(".course-card").remove(":contains('DS 60301')");
-    //  jQuery(".course-card").remove(":contains('DS 60305')");
-    //  jQuery(".course-card").remove(":contains('DS 60620')");
+    jQuery(".course-card").remove(":contains('MSA 60111')");
+    jQuery(".course-card").remove(":contains('MSA 60112')");
+    jQuery(".course-card").remove(":contains('MSA 60122')");
+    jQuery(".course-card").remove(":contains('MSA 60123')");
+    jQuery(".course-card").remove(":contains('MSA 60141')");
+    jQuery(".course-card").remove(":contains('MSA 60151')");
+    jQuery(".course-card").remove(":contains('DS 60301')");
+    jQuery(".course-card").remove(":contains('DS 60305')");
+    jQuery(".course-card").remove(":contains('DS 60620')");
+    jQuery(".course-card").remove(":contains('THEO 60181')");
+    jQuery(".course-card").remove(":contains('THEO 60890')");
     //  jQuery(".course-card").remove(":contains('THEO 60201')");
     //  jQuery(".course-card").remove(":contains('THEO 63202')");
     //  jQuery(".course-card").remove(":contains('THEO 60664')");
