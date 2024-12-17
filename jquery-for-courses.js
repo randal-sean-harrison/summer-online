@@ -45,7 +45,7 @@ jQuery(document).ready(function () {
     jQuery(".course-card").remove(":contains('DS 60620')");
     jQuery(".course-card").remove(":contains('THEO 60181')");
     jQuery(".course-card").remove(":contains('THEO 60890')");
-    //  jQuery(".course-card").remove(":contains('THEO 60201')");
+    jQuery(".course-card").remove(":contains('THEO 60201')");
     //  jQuery(".course-card").remove(":contains('THEO 63202')");
     //  jQuery(".course-card").remove(":contains('THEO 60664')");
 
