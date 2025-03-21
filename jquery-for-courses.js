@@ -26,7 +26,7 @@ jQuery(document).ready(function () {
     jQuery(".course-card").remove(":contains('ACCT 30120')");
     jQuery(".course-card").remove(":contains('ACCT 30280')");
     jQuery(".course-card").remove(":contains('ACCT 40510')");
-    //  jQuery(".course-card").remove(":contains('THEO 60181')");
+    jQuery(".course-card").remove(":contains('THEO 60664')");
     //  jQuery(".course-card").remove(":contains('IRST ')");
     //  jQuery(".course-card").remove(":contains('Irish Seminar')");
     //  jQuery(".course-card").remove(":contains('ACCT 60411')");
